@@ -4,5 +4,6 @@
 
 # Excepting files
 !README.md
+!LICENSE
 !.config
 !.zshrc
