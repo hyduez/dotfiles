@@ -1,0 +1,13 @@
+# Ignore everything
+/*
+!.gitignore
+
+# Excepting files
+!alacritty
+!btop
+!fastfetch
+!fish
+!fontconfig
+!kitty
+!nnn
+!starship.toml
