@@ -5,6 +5,9 @@
       <a href="https://cachyos.org/">CachyOS</a> (An <a href="https://wiki.archlinux.org/title/Arch-based_distributions">Arch-based</a> distribution)
     </li>
     <li>
+      <a href="https://www.rodsbooks.com/refind/">ReFind</a> (with <a href="https://github.com/Nyoutaaa/rEFInd-Minimalist">rEFInd-Minimalist</a> theme)
+    </li>
+    <li>
       <a href="https://github.com/Jguer/yay">YAY</a> (For global repositories uses)
     </li>
     <li>
@@ -79,7 +82,13 @@
       <a href="https://github.com/catppuccin/kde">Catppuccin Latte</a> (For Colors section but I use #5b89ff as accent color)
     </li>
     <li>
-      <a href="https://github.com/KDE/breeze">Breeze</a> (For Application Style, Plasma Style, Window Decorations, Icons, Cursors, Splash Screen and SDDM)
+      <a href="https://github.com/KDE/breeze">Breeze</a> (For Application Style, Window Decorations, Icons, Cursors, Splash Screen and SDDM)
+    </li>
+    <li>
+      <a href="https://store.kde.org/p/1400424/">WhiteSur-Dark</a> (for Plasma Style)
+    </li>
+    <li>
+      <a href="https://store.kde.org/p/1340791/">Reversal Dark</a> (For icons)
     </li>
     <li>
       <a href="https://www.opensans.com/">Open Sans</a> (General font for the system but I use <a href="https://github.com/samuelngs/apple-emoji-linux">Apple Emoji Linux</a> for emojis)
