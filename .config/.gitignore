@@ -3,7 +3,6 @@
 !.gitignore
 
 # Excepting files
-!alacritty
 !btop
 !fastfetch
 !fontconfig

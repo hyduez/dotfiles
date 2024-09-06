@@ -2,13 +2,13 @@
   <h3>System Overview</h3>
   <ul>
     <li>
-      <a href="https://cachyos.org/">CachyOS</a> (An <a href="https://wiki.archlinux.org/title/Arch-based_distributions">Arch-based</a> distribution)
+      <a href="https://archlinux.org/">Arch Linux</a>
     </li>
     <li>
-      <a href="https://www.rodsbooks.com/refind/">ReFind</a> (with <a href="https://github.com/Nyoutaaa/rEFInd-Minimalist">rEFInd-Minimalist</a> theme)
+      <a href="https://www.gnu.org/software/grub/">Grub</a>
     </li>
     <li>
-      <a href="https://github.com/Jguer/yay">YAY</a> (For global repositories uses)
+      <a href="https://github.com/Jguer/yay">Yet Another Yogurt</a> (For global repositories uses)
     </li>
     <li>
       <a href="https://brew.sh/">Homebrew</a> (To install <i>cli</i>s)
@@ -16,16 +16,13 @@
     <li>
       <a href="https://flatpak.org/">Flatpak</a> (To encapsulate proprietary software)
     </li>
-    <li>
-      <a href="https://nixos.org/">Nix</a> (For exceptional cases)
-    </li>
   </ul>
 </div>
 <div>
   <h3>Shell Tools</h3>
   <ul>
     <li>
-      <a href="https://www.zsh.org/">Zsh</a> (Main terminal instead of <a href="https://fishshell.com/">Fish</a>, default by CachyOS)
+      <a href="https://www.zsh.org/">Zsh</a> (Main terminal instead of <a href="https://www.gnu.org/software/bash/">Bash</a>, default by Arch)
     </li>
     <li>
       <a href="https://github.com/zplug/zplug">Z-plug</a> (A next generation plugin manager for zsh)
@@ -34,7 +31,7 @@
       <a href="https://starship.toml/">Starship</a> (Customizable prompt shell)
     </li>
     <li>
-      <a href="https://github.com/fastfetch-cli/fastfetch">FastFetch</a> (A <a href="https://github.com/dylanaraps/neofetch">neofetch</a> like system information tool)
+      <a href="https://github.com/fastfetch-cli/fastfetch">FastFetch</a> (A <a href="https://github.com/dylanaraps/neofetch">neofetch</a>-like system information tool)
     </li>
     <li>
       <a href="https://github.com/aristocratos/btop">BTOP</a> (Monitor of resources, default by CachyOS)
@@ -79,19 +76,7 @@
   <h3>KDE Settings</h3>
   <ul>
     <li>
-      <a href="https://github.com/catppuccin/kde">Catppuccin Latte</a> (For Colors section but I use #5b89ff as accent color)
-    </li>
+    <h4>WIP</h4>
     <li>
-      <a href="https://github.com/KDE/breeze">Breeze</a> (For Application Style, Window Decorations, Icons, Cursors, Splash Screen and SDDM)
-    </li>
-    <li>
-      <a href="https://store.kde.org/p/1400424/">WhiteSur-Dark</a> (for Plasma Style)
-    </li>
-    <li>
-      <a href="https://store.kde.org/p/1340791/">Reversal Dark</a> (For icons)
-    </li>
-    <li>
-      <a href="https://www.opensans.com/">Open Sans</a> (General font for the system but I use <a href="https://github.com/samuelngs/apple-emoji-linux">Apple Emoji Linux</a> for emojis)
-    </li>
   </ul>
 </div>
