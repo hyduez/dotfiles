@@ -27,6 +27,8 @@
       "left": 4,
       "right": 6
     },
-    "source": "linux"
+    "height": 12,
+    "type": "kitty",
+    "source": "~/.config/fastfetch/icons/arch-linux.png"
   }
 }
