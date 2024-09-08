@@ -1,14 +1,18 @@
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/6b387eba-15b8-43f6-b16d-2145673c5a62" alt="Screenshot" width="60%" />
+</div>
+
 <div>
   <h3>System Overview</h3>
   <ul>
     <li>
-      <a href="https://archlinux.org/">Arch Linux</a>
+      <a href="https://archlinux.org/">Arch Linux</a> (Installed by <code>archinstall</code> script)
     </li>
     <li>
-      <a href="https://www.gnu.org/software/grub/">Grub</a>
+      <a href="https://www.gnu.org/software/grub/">Grub</a>, just grub.
     </li>
     <li>
-      <a href="https://github.com/Jguer/yay">Yet Another Yogurt</a> (For global repositories uses)
+      <a href="https://github.com/Jguer/yay">Yet Another Yogurt</a> (To install common OSS)
     </li>
     <li>
       <a href="https://brew.sh/">Homebrew</a> (To install <i>cli</i>s)
@@ -25,7 +29,7 @@
       <a href="https://www.zsh.org/">Zsh</a> (Main terminal instead of <a href="https://www.gnu.org/software/bash/">Bash</a>, default by Arch)
     </li>
     <li>
-      <a href="https://github.com/zplug/zplug">Z-plug</a> (A next generation plugin manager for zsh)
+      <a href="https://github.com/zplug/zplug">Z-plug</a> (A next generation plugin manager for Zsh)
     </li>
     <li>
       <a href="https://starship.toml/">Starship</a> (Customizable prompt shell)
@@ -34,10 +38,10 @@
       <a href="https://github.com/fastfetch-cli/fastfetch">FastFetch</a> (A <a href="https://github.com/dylanaraps/neofetch">neofetch</a>-like system information tool)
     </li>
     <li>
-      <a href="https://github.com/aristocratos/btop">BTOP</a> (Monitor of resources, default by CachyOS)
+      <a href="https://github.com/aristocratos/btop">BTOP</a> (Monitor of resources)
     </li>
     <li>
-      <a href="https://github.com/sharkdp/bat">Bat</a> (A cat(1) clone with wings, also default by CachyOS)
+      <a href="https://github.com/sharkdp/bat">Bat</a> (A cat(1) clone with wings)
     </li>
   </ul>
 </div>
@@ -77,6 +81,6 @@
   <ul>
     <li>
     <h4>WIP</h4>
-    <li>
+    </li>
   </ul>
 </div>
