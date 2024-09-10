@@ -1,5 +1,7 @@
 {
     "editor.minimap.enabled": false,
     "workbench.productIconTheme": "fluent-icons",
-    "workbench.iconTheme": "eq-material-theme-icons-palenight"
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "window.titleBarStyle": "custom",
+    "git.openRepositoryInParentFolders": "never"
 }

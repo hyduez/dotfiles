@@ -15,8 +15,16 @@ if ! zplug check --verbose; then
 fi
 
 eval "$(starship init zsh)"
+eval "$(fnm env --shell zsh)"
 
 # Then, source plugins and add commands to $PATH
 zplug load
 
 export GPG_TTY=$(tty)
+
+# bun completions
+[ -s "/home/paulov/.bun/_bun" ] && source "/home/paulov/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
