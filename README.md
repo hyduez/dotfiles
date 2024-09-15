@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/3e031c48-66b1-4f11-9329-e73196fd51fa" alt="Screenshot" width="60%" />
+  <img src="https://github.com/user-attachments/assets/e7a16ef5-0d34-4132-9496-9c2cfe4a411b" alt="Screenshot" width="60%" />
 </div>
 
 <div>
@@ -49,13 +49,10 @@
   <h3>Software Implementations</h3>
   <ul>
     <li>
-      <a href="https://community.kde.org/Plasma">KDE Plasma</a> (Desktop enviroment and windows manager, KWin)
+      <a href="https://hyprland.org/">Hyprland</a>
     </li>
     <li>
       <a href="https://github.com/ungoogled-software/ungoogled-chromium">UnGoogled Chromium</a> (Chromium without Google services)
-    </li>
-    <li>
-      <a href="https://github.com/VSCodium/vscodium">VSCodium</a> (Visual Studio Code without Microsoft telemetry)
     </li>
     <li>
       <a href="https://sw.kovidgoyal.net/kitty">Kitty</a> (Terminal emulator instead of Alacritty)
@@ -71,13 +68,10 @@
     <li>
       <a href="https://pwsafe.org/">PasswordSafe</a> (An open source password manager)
     </li>
-    <li>
-      <a href="https://github.com/spicetify/cli">Spicetify-cli</a> (Command-line tool to customize Spotify client)
-    </li>
   </ul>
 </div>
 <div>
-  <h3>KDE Settings</h3>
+  <h3>Hyprland Ecosystem</h3>
   <ul>
     <li>
     <h4>WIP</h4>
