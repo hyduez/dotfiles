@@ -53,13 +53,14 @@
         "custom/media",         // media info
 
         "custom/left6",
-        "pulseaudio",           // output device
+        "custom/weather",              // output device
 
         "custom/left7",
-        "backlight",            // brightness
+        "pulseaudio",           // brightness
 
-        // "custom/left8",
-        // "battery",              // battery
+        "custom/left8",
+        "backlight",
+	// "battery",              // battery
 
         "custom/leftin2",
         "custom/power"          // power button
@@ -227,6 +228,14 @@
         "on-scroll-down": "brightnessctl set 5%-",
         "min-length": 6,
         "max-length": 6
+    },
+
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 1800,
+        "exec": "~/.config/waybar/scripts/weather.sh",
+        "return-type": "json"
     },
 
     "battery": {

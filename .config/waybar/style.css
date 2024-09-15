@@ -78,7 +78,7 @@ tooltip {
 #custom-wifi,
 #pulseaudio,
 #backlight,
-#battery,
+#custom-weather,
 #custom-power {
     opacity: 1;
     margin-bottom: 0px;
@@ -124,7 +124,7 @@ tooltip {
 @define-color wifi          #181825;
 @define-color pulseaudio    #181825;
 @define-color backlight     #1e1e2e;
-@define-color battery       #313244;
+@define-color weather       #313244;
 @define-color power         #b4befe;
 
 /* Window Icon */
@@ -282,10 +282,21 @@ tooltip {
     padding-left: 8px;
 }
 
-/* PulseAudio */
+/* Weather */
 #custom-left6 {
-    color: @pulseaudio;
+    color: @backlight;
     background: @background;
+    padding-left: 2px;
+}
+
+#custom-weather {
+    background: @backlight;
+}
+
+/* PulseAudio */
+#custom-left7 {
+    color: @pulseaudio;
+    background: @backlight;
     padding-left: 3px;
 }
 
@@ -294,25 +305,14 @@ tooltip {
 }
 
 /* Brightness */
-#custom-left7 {
-    color: @backlight;
+#custom-left8 {
+    color: @background;
     background: @pulseaudio;
     padding-left: 2px;
 }
 
 #backlight {
-    background: @backlight;
-}
-
-/* Battery */
-#custom-left8 {
-    color: @battery;
-    background: @backlight;
-    padding-left: 2px;
-}
-
-#battery {
-    background: @battery;
+    background: @background;
 }
 
 /* Power Button */
@@ -330,6 +330,7 @@ tooltip {
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 1);
     border-radius: 20px;
     margin-top: 2px;
+    margin-left: 4px;
     margin-right: 4px;
     margin-bottom: 2px;
     padding-right: 6px;
