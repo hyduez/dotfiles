@@ -6,9 +6,11 @@
 !btop
 !fastfetch
 !fontconfig
+!hypr
 !kitty
 !nnn
 !wallpapers
+!waybar
 !starship.toml
 
 !VSCodium

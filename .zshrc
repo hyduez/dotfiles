@@ -28,3 +28,8 @@ export GPG_TTY=$(tty)
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+set_title() {
+  print -Pn "\e]2;%n@%m\a"
+}
+precmd_functions+=set_title
