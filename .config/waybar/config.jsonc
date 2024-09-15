@@ -9,8 +9,8 @@
     "reload_style_on_change": true,
 
 // Positions
-	"modules-left": [
-        "custom/paddl",
+    "modules-left": [
+	"custom/paddl",
         "custom/ws",            // window icon
         "custom/left1",
 
@@ -19,7 +19,7 @@
 
         "custom/paddw",
         "hyprland/window"       // window title
-    ],
+     ],
 
 	"modules-center": [
         "custom/paddc",
@@ -195,7 +195,7 @@
     },
 
     "custom/media": {
-        "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py",
+        "exec": "~/.config/waybar/scripts/mediaplayer.sh",
         "format": "{}",
         "return-type": "json",
         "on-click": "playerctl play-pause",
