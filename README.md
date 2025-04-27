@@ -1,0 +1,2 @@
+### 2025-04-27 00:57
+Void linux with glibc, cuz using musl is a headache. Installed at the first time with xfce4, and using it's ecosystem to enchance i3wm. GTK3+ as graphical engine and Xorg (X11) as display server. LightDM instead of sddm and gddm, cuz it works and its bloatedless. I dont use lemurs or lydm because lemurs doesnt work on non-systemd workflows and with lydm I have to compile it with Zig and it makes me lazy. (I use lazyvim, btw)

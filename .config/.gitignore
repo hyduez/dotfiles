@@ -1,0 +1,13 @@
+# Ignore everything
+/*
+!.gitignore
+
+# Excepting files
+!btop
+!fastfetch
+!i3
+!kitty
+!polybar
+!nvim
+!starship.toml
+

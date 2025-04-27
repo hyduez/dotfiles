@@ -1,0 +1,9 @@
+# Ignore everything
+/*
+!.gitignore
+
+# Excepting files
+!README.md
+!LICENSE
+!.config
+!.zshrc
