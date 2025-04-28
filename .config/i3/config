@@ -38,10 +38,23 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Enabling transparency to i3 session
-exec --no-startup-id xcompmgr -c 
+exec --no-startup-id picom
+
+# Disabling screen timeout
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
+
+# X settings
+exec --no-startup-id xsettingsd
 
 # Polybar starts
 exec --no-startup-id polybar
+
+# xclipboardmenu
+exec --no-startup-id clipmenud
+
+# notification library
+exec --no-startup-id dunst
 
 # Set a randomized background located on wallpapers's directory
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
@@ -67,15 +80,22 @@ bindsym $mod+Return exec kitty
 bindsym $mod+b exec librewolf
 
 # screenshooter cli
-bindsym Print exec xfce4-screenshooter -f -s /home/paulov/Pictures/screenshots/
-bindsym $mod+Print exec xfce4-screenshooter -r -s /home/paulov/Pictures/screenshots/
+bindsym Print exec xfce4-screenshooter -f -s ~/Pictures/screenshots/
+bindsym $mod+Print exec xfce4-screenshooter -r -s ~/Pictures/screenshots/
 bindsym $mod+Shift+Print exec xfce4-screenshooter -r -c
+
+# kill polybar instance
+bindsym $mod+Shift+p exec ~/.config/i3/scripts/polybar.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# start rofi (a powerful software than dmenu)
+bindsym $mod+d exec --no-startup-id rofi -show drun
+# I only need that right now
+
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+# bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a

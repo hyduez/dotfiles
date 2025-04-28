@@ -3,11 +3,13 @@
 !.gitignore
 
 # Excepting files
-!btop
 !fastfetch
 !i3
+!nix
 !kitty
 !polybar
 !nvim
+!picom
+!dunst
 !starship.toml
 

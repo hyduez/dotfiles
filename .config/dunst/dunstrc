@@ -1,0 +1,37 @@
+[global]
+# Settings
+notification_limit = 5
+
+# Geometry
+width = (200, 400)
+height = (100, 300)
+offset = 140x50
+padding = 20
+horizontal_padding = 25
+text_icon_padding = 20
+gap_size = 5
+frame_width = 0
+
+# Text
+font = Inter SemiBold 11
+alignment = center
+show_age_threshold = -1
+format = <b><i>%s</i></b>\n%b
+
+# Icons
+max_icon_size = 64
+icon_theme = MoreWaita
+enable_recursive_icon_lookup = true
+
+# Styling
+background = "#1e1e1e"
+foreground = "#ffffff"
+
+[urgency_low]
+timeout = 3
+
+[urgency_normal]
+timeout = 5
+
+[urgency_critical]
+timeout = 0
