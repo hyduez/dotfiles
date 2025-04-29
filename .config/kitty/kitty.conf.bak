@@ -1,8 +1,8 @@
-# font_family      "FiraCode Nerd Font"
+font_family      "FiraCode Nerd Font"
 font_size        10
-# bold_font        auto
-# italic_font      auto
-# bold_italic_font auto
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
 
 cursor_sheap     beam
 
@@ -13,7 +13,7 @@ tab_powerline_style slanted
 tab_title_template "{title}{' :{}:'.format(num_windows) if num_windows > 1 else ''"
 
 background_opacity 0.6
-window_padding_width 12
+window_padding_width 10
 enable_audio_bell no
 hide_window_decorations yes
 
@@ -70,11 +70,3 @@ color14 #94e2d5
 # white
 color7  #bac2de
 color15 #a6adc8
-
-
-# BEGIN_KITTY_FONTS
-font_family      family="FiraCode Nerd Font"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# END_KITTY_FONTS

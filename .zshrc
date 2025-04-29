@@ -1,3 +1,6 @@
+# Calling z-plug
+source ~/.zplug/init.zsh
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -12,7 +15,19 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+zplug "agkozak/zsh-z"
+zplug "plugins/git", from:oh-my-zsh
+
 eval "$(starship init zsh)"
 # End of lines added by paulov
 
 export GPG_TTY=$(tty)
+
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+zplug load

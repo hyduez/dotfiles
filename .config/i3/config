@@ -56,6 +56,12 @@ exec --no-startup-id clipmenud
 # notification library
 exec --no-startup-id dunst
 
+# dbus pulseaudio start
+exec --no-startup-id dbus-launch pulseaudio --start
+
+# layouts
+exec --no-startup-id setxkbmap -model pc105 -layout us,latam -variant ,, -option grp:win_space_toggle
+
 # Set a randomized background located on wallpapers's directory
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
 
@@ -131,6 +137,9 @@ bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
+
+# split toggle
+bindsym $mod+x split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -222,6 +231,9 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+gaps inner 20
+gaps top 40
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
