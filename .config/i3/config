@@ -60,7 +60,7 @@ exec --no-startup-id dunst
 exec --no-startup-id dbus-launch pulseaudio --start
 
 # layouts
-exec --no-startup-id setxkbmap -model pc105 -layout us,latam -variant ,, -option grp:win_space_toggle
+exec --no-startup-id setxkbmap -model pc105 -layout us,latam -variant ,, -option grp:alt_space_toggle
 
 # Set a randomized background located on wallpapers's directory
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
@@ -85,10 +85,13 @@ bindsym $mod+Return exec kitty
 # start a browser
 bindsym $mod+b exec librewolf
 
+# start zathura
+bindsym $mod+o exec zathura
+
 # screenshooter cli
-bindsym Print exec xfce4-screenshooter -f -s ~/Pictures/screenshots/
-bindsym $mod+Print exec xfce4-screenshooter -r -s ~/Pictures/screenshots/
-bindsym $mod+Shift+Print exec xfce4-screenshooter -r -c
+bindsym Print exec maim ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png
+bindsym $mod+Print exec maim -s ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png
+bindsym $mod+Shift+Print exec maim -s | xclip -selection clipboard -t image/png
 
 # kill polybar instance
 bindsym $mod+Shift+p exec ~/.config/i3/scripts/polybar.sh
@@ -97,7 +100,7 @@ bindsym $mod+Shift+p exec ~/.config/i3/scripts/polybar.sh
 bindsym $mod+Shift+q kill
 
 # start rofi (a powerful software than dmenu)
-bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -config ~/.config/rofi/rofi.rasi -show drun
 # I only need that right now
 
 # start dmenu (a program launcher)

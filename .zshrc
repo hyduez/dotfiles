@@ -31,3 +31,10 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
+
+# fnm
+FNM_PATH="/home/paulov/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/paulov/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi

@@ -7,3 +7,5 @@
 !LICENSE
 !.config
 !.zshrc
+!justfile
+!.env.example
