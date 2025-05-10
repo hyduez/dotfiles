@@ -1,6 +1,16 @@
+### 2025-05-09 19:45
+I migrated from i3 to bspwm and I removed some directories. Fixed mason 2.0 break changes 
+<details>
+  <summary>Screenshot</summary>
+  <div align="center">
+    <img src="https://envs.sh/7tI.png" alt="screenshot"/>
+  </div>
+</details>
+
 ### 2025-05-04 21:38
 Sup, those were 7 days without any update, but I was busy learning C++, I started to make some small programs, later I decided to use glib (GTK's library low-level for C++), so I had to link the installed packages, and like I was using flakes to do it, I prefer dont do it, vcpkg gave my troubles before, conan worked for me. Now I'm learning Rust, to use it later, with cargo and crane (a flake's util), to make that thing I want to do. For now, I'm learning concurrent programming `(std::thread)`, `async-await` (tokio crate) and testing (`#[cfg(test)]`). I'm also interesed to learn about algorithms, one of my friends, that is studying at university, told me about some algorithms and how calculate it complexity, yk, that thing of omega (n) powered by two. I added rofi themes, that are from edu-flores' dotfiles, and some plugins to lazyvim like wakatime stats and deleted one file that was a logger file. Oh, right, I deleted xfce4-related packages, now Im ussing only lxde-appareance and to take screenshots im using ***maim***. In the next week I will come back to high-school, one week more and my vacation is over. I will study some type of sort algorithms like bubble, quick, insert, trees, graphs, manacher and binaries schemes.
 <details>
+  <summary>Screenshot</summary>
   <div align="center">
     <img src="https://envs.sh/l6y.png" alt="screenshot" />
   </div>

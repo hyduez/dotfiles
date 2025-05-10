@@ -5,7 +5,7 @@ notification_limit = 5
 # Geometry
 width = (200, 400)
 height = (100, 300)
-offset = 140x50
+offset = 20x50
 padding = 20
 horizontal_padding = 25
 text_icon_padding = 20

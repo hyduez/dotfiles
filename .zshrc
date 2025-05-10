@@ -38,3 +38,5 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/home/paulov/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
+
+alias ls="exa -l --color=never --icons=always -a -B -o --no-permissions"

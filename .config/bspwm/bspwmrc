@@ -1,0 +1,25 @@
+#! /bin/sh
+
+pgrep -x sxhkd >/dev/null || sxhkd &
+pgrep -x polybar >/dev/null || polybar &
+pgrep -x picom >/dev/null || picom &
+pgrep -x clipmenud >/dev/null || clipmenud &
+pgrep -x feh >/dev/null || feh --bg-fill ~/.config/wallpapers/actual.png &
+setxkbmap -model pc105 -layout us,latam -variant ,, -option grp:alt_space_toggle &
+
+xset s off &
+xset -dpms &
+
+bspc monitor -d b w s p m e p i c s
+
+bspc config border_width 2
+bspc config window_gap 2
+
+bspc config top_padding 40
+bspc config left_padding 5
+bspc config right_padding 5
+bspc config bottom_padding 3
+
+bspc config split_ratio 0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle true

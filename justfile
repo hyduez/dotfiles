@@ -1,6 +1,5 @@
-gc-sudo:
-  # garbage collect all unused nix store entries
-  sudo -H nix-collect-garbage -d
+cc:
+  xbps-remove -Oo
 
 gc:
   nix-collect-garbage -d

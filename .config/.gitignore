@@ -4,7 +4,8 @@
 
 # Excepting files
 !fastfetch
-!i3
+!bspwm
+!sxhkd
 !nix
 !kitty
 !polybar
