@@ -1,9 +1,18 @@
+### 2025-05-19 11:30
+I removed picom and using bspwn native transparency, disabling animations doing it less laggy
+<details>
+  <summary>Screenshot</summary>
+  <div align="center">
+    <img src="https://envs.sh/rYp.png" alt="screenshot" />
+  </div>
+</details>
+
 ### 2025-05-09 19:45
 I migrated from i3 to bspwm and I removed some directories. Fixed mason 2.0 break changes 
 <details>
   <summary>Screenshot</summary>
   <div align="center">
-    <img src="https://envs.sh/7tI.png" alt="screenshot"/>
+    <img src="https://envs.sh/7tI.png" alt="screenshot" />
   </div>
 </details>
 
