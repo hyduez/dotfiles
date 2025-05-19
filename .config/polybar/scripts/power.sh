@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define power menu options
-options="\n\n\n󰩈"
+options="\n\n󰩈"
 
 # Display Rofi menu and store the selected option
 selected_option=$(echo -e "$options" | rofi -dmenu -config ~/.config/rofi/power.rasi)
@@ -9,16 +9,13 @@ selected_option=$(echo -e "$options" | rofi -dmenu -config ~/.config/rofi/power.
 # Perform actions based on the selected option
 case "$selected_option" in
 "")
-  poweroff
+  loginctl poweroff
   ;;
 "")
-  reboot
-  ;;
-"")
-  ~/.config/i3/scripts/lockscreen.sh
+  loginctl reboot
   ;;
 "󰩈")
-  i3-msg exit
+  bspc quit
   ;;
 *)
   echo "Dismissed"
