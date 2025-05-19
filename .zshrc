@@ -39,4 +39,7 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
-alias ls="exa -l --color=never --icons=always -a -B -o --no-permissions"
+alias ls="exa -l --color=never --icons=always -B -o --no-permissions"
+
+co() { g++ -std=c++17 -O2 -o "${1%.*}" $1 -Wall; }
+run() { co $1 && ./${1%.*} & fg; }

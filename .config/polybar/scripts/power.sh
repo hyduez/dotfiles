@@ -9,10 +9,10 @@ selected_option=$(echo -e "$options" | rofi -dmenu -config ~/.config/rofi/power.
 # Perform actions based on the selected option
 case "$selected_option" in
 "")
-  loginctl poweroff
+  poweroff
   ;;
 "")
-  loginctl reboot
+  reboot
   ;;
 "")
   ~/.config/i3/scripts/lockscreen.sh

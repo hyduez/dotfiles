@@ -1,0 +1,56 @@
+configuration {
+    font: "Inter SemiBold 12";
+}
+
+@theme "dark"
+
+* {
+    spacing: 0;
+}
+
+window {
+    width: 400;
+    height: 110;
+    location: center;
+    background-color: @background;
+    border-radius: 18 18 0 0;
+}
+
+mainbox {
+    children: [ box-buttons ];
+    background-color: inherit;
+    padding: 15 20;
+}
+
+box-buttons {
+    children: [ listview ];
+    orientation: horizontal;
+    background-color: inherit;
+}
+
+listview {
+    lines: 1;
+    columns: 4;
+    cycle: true;
+    background-color: inherit;
+    spacing: 8;
+}
+
+element {
+    background-color: inherit;
+}
+
+element-text {
+	font: "JetBrainsMono NFM 30";
+    background-color: @raised;
+    color: @foreground-alt;
+    horizontal-align: 0.4;
+    border-radius: 100%;
+    padding: 15 0;
+    cursor: pointer;
+}
+
+element-text.selected {
+    background-color: @urgent;
+    color: @foreground;
+}

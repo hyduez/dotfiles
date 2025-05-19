@@ -2,10 +2,11 @@
 
 pgrep -x sxhkd >/dev/null || sxhkd &
 pgrep -x polybar >/dev/null || polybar &
-pgrep -x picom >/dev/null || picom &
 pgrep -x clipmenud >/dev/null || clipmenud &
-pgrep -x feh >/dev/null || feh --bg-fill ~/.config/wallpapers/actual.png &
+pgrep -x pulseaudio >/dev/null || dbus-launch pulseaudio --start &
+pgrep -x feh >/dev/null || feh --bg-fill ~/.config/wallpapers/actual.jpg &
 setxkbmap -model pc105 -layout us,latam -variant ,, -option grp:alt_space_toggle &
+bash ~/.config/bspwm/scripts/floating-desktop.sh &
 
 xset s off &
 xset -dpms &
@@ -23,3 +24,5 @@ bspc config bottom_padding 3
 bspc config split_ratio 0.52
 bspc config borderless_monocle true
 bspc config gapless_monocle true
+
+bspc rule -a librewolf desktop='^2'
