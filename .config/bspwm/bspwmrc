@@ -1,9 +1,9 @@
 #! /bin/sh
 
 pgrep -x sxhkd >/dev/null || sxhkd &
-pgrep -x polybar >/dev/null || polybar &
 pgrep -x clipmenud >/dev/null || clipmenud &
-pgrep -x pulseaudio >/dev/null || dbus-launch pulseaudio --start &
+pgrep -x pipewire >/dev/null || pipewire &
+pgrep -x polybar >/dev/null || polybar &
 pgrep -x feh >/dev/null || feh --bg-fill ~/.config/wallpapers/actual.jpg &
 setxkbmap -model pc105 -layout us,latam -variant ,, -option grp:alt_space_toggle &
 bash ~/.config/bspwm/scripts/floating-desktop.sh &

@@ -30,6 +30,15 @@ super + Escape
 super + alt + p
   killall polybar && polybar -c ~/.config/polybar/config.ini
 
+super + shift + p
+  polybar -c ~/.config/polybar/config.ini
+
+super + alt + s
+  killall pipewire && pipewire
+
+super + shift + s
+  pipewire
+
 #
 # bspwm hotkeys
 #

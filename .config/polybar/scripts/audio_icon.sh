@@ -19,6 +19,9 @@ $SPEAKERS)
 $HEADPHONES)
   audio_icon="󰋋"
   ;;
+$SPEAKER)
+  audio_icon="󰓃"
+  ;;
 *)
   audio_icon=""
   ;;
