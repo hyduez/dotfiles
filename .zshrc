@@ -43,3 +43,10 @@ alias ls="exa -l --color=never --icons=always -B -o --no-permissions"
 
 co() { g++ -std=c++17 -O2 -o "${1%.*}" $1 -Wall; }
 run() { co $1 && ./${1%.*} & fg; }
+
+# bun completions
+[ -s "/home/paulov/.bun/_bun" ] && source "/home/paulov/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
