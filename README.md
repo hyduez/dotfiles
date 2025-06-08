@@ -1,3 +1,12 @@
+### 2025-06-08 14:34
+Weekly updates!! I updated background and i got envs.net shell access, so now I have a website and a blog at [paulov.envs.net](https://paulov.envs.net/) and a gemini capsule at gemini://envs.net/~paulov :) Get more updates, day by day, in my [twtxt](https://paulov.envs.net/twtxt.txt) instance
+<details>
+  <summary>Screenshot</summary>
+  <div align="center">
+    <img src="https://envs.sh/aJ9.png" alt="screenshot" />
+  </div>
+</details>
+
 ### 2025-05-19 11:30
 I removed picom and using bspwn native transparency, disabling animations doing it less laggy
 <details>
