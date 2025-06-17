@@ -2,15 +2,19 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 0, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "custom/void",
+        "custom/logo",
         "river/tags",
         "custom/media"
     ],
     "modules-center": [
+        "clock",
+        "temperature"
     ],
     "modules-right": [
         "mpd",
@@ -18,11 +22,8 @@
         "network",
         "cpu",
         "memory",
-        "temperature",
-        "backlight",
         "keyboard-state",
         "sway/language",
-        "clock",
         "tray",
         "custom/power"
     ],
@@ -81,9 +82,8 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%Y-%m-%d %H:%M}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -101,12 +101,10 @@
         "format-icons": ["", "", ""]
     },
     "backlight": {
-        // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "Wi-Fi ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr}",
         "tooltip-format": "{ifname} via {gwaddr}",
@@ -115,9 +113,8 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}  {format_source}",
+        "format-bluetooth": "{volume}% {icon}  {format_source}",
         "format-bluetooth-muted": "{icon} {format_source}",
         "format-muted": "{format_source}",
         "format-source": "{volume}% ",
@@ -146,7 +143,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : "  ⏻  ",
 		"tooltip": true,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder

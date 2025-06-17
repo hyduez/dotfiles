@@ -7,7 +7,7 @@ riverctl map normal Super+Shift B spawn "killall waybar && waybar -c ~/.config/w
 
 riverctl map normal None PRINT spawn "grim ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png"
 riverctl map normal Super PRINT spawn "slurp | grim -g - ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png"
-riverctl map normal Super+Shift PRINT spawn "slurp | grim -g - - | wl-copy"
+riverctl map normal Super+Shift PRINT spawn "slurp | grim -g - - | wl-copy -t image/png"
 
 riverctl map normal Super Q close
 riverctl map normal Super+Shift E exit
