@@ -85,7 +85,7 @@ for mode in normal locked; do
 done
 
 riverctl background-color 0x000000
-riverctl border-color-focused 0x93a1a1
+riverctl border-color-focused 0x2a2929
 riverctl border-color-unfocused 0x586e75
 
 riverctl set-repeat 50 300
