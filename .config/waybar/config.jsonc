@@ -10,7 +10,7 @@
         "custom/void",
         "custom/logo",
         "river/tags",
-        "custom/media"
+        "river/window"
     ],
     "modules-center": [
         "clock",
@@ -44,6 +44,9 @@
     //         "default": ""
     //     }
     // },
+    "river/window": {
+        "max-length": 25,
+    },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format-disconnected": "Disconnected ",
@@ -144,14 +147,14 @@
     },
     "custom/power": {
         "format" : "  ⏻  ",
-		"tooltip": true,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+		    "tooltip": true,
+		    "menu": "on-click",
+		    "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		    "menu-actions": {
+			      "shutdown": "shutdown",
+			      "reboot": "reboot",
+			      "suspend": "systemctl suspend",
+			      "hibernate": "systemctl hibernate"
+		    }
     }
 }
