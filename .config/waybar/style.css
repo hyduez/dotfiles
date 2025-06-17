@@ -56,15 +56,15 @@ button:hover {
 #tray,
 #mode,
 #mpd {
-  margin: 5px 1px;
-  padding: 7px 12px;
+  margin: 5px 1px 1px 1px;
+  padding: 7px 12px 7px 12px;
   color: #ffffff;
   border-radius: 8;
   background-color: #1d1c1c;
 }
 
 #tags {
-  margin: 5px 1px 5px 15px;
+  margin: 6px 1px 0px 15px;
   padding: 0;
   background-color: #1d1c1c;
   border-radius: 8;
