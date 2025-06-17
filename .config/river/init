@@ -90,7 +90,7 @@ riverctl border-color-unfocused 0x586e75
 
 riverctl set-repeat 50 300
 
-riverctl rule-add -app-id 'float*' -title 'foo' float
+riverctl rule-add -app-id 'float*' -title 'PasswordSafe (linux)' float
 riverctl rule-add -app-id "bar" csd
 
 riverctl spawn rivertile

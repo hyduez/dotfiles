@@ -19,7 +19,7 @@ fi
 
 if [ ! -d $OUTPUT_DIR ]; then
   mkdir -p $OUTPUT_DIR
-  echo "$DIRECTORIO_DESTINO created"
+  echo "$OUTPUT_DIR created"
 fi
 
 for subentry in $INPUT_DIR/*; do
