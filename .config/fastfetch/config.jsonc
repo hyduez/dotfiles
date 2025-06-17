@@ -74,11 +74,6 @@
             "keyColor": "blue"
         },
         {
-            "type": "lm",
-            "key": "│ ├ ",
-            "keyColor": "blue"
-        },
-        {
             "type": "wm",
             "key": "│ ├ ",
             "keyColor": "blue"

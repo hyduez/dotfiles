@@ -65,14 +65,14 @@ button:hover {
 }
 
 #tags {
-  margin: 6px 1px 0px 12px;
+  margin: 5px 1px 0px 12px;
   padding: 0;
   background-color: #1d1c1c;
   border-radius: 8;
 }
 
 #custom-power {
-  margin: 6px 10px 3px 3px;
+  margin: 6px 10px 0px 3px;
   padding: 0 1px 0 0;
   background-color: #1d1c1c;
   border-radius: 8;

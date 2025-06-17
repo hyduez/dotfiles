@@ -91,7 +91,7 @@ riverctl border-width 0
 
 riverctl set-repeat 50 300
 
-riverctl rule-add -app-id 'float*' -title 'PasswordSafe (linux)' float
+riverctl rule-add -app-id 'float*' -title 'PasswordSafe' float
 riverctl rule-add -app-id "bar" csd
 
 riverctl spawn rivertile
@@ -103,6 +103,7 @@ rivertile -view-padding 6 -outer-padding 6 &
 riverctl keyboard-layout -options 'grp:alt_space_toggle' us,latam
 
 pipewire &
+blueman-applet &
 swww-daemon --no-cache --format xrgb &
 swww img ~/.config/wallpapers/actual.png --transition-type random --transition-fps 100 &
 waybar
