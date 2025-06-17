@@ -1,3 +1,6 @@
+symlink:
+  ./scripts/symlink.sh
+
 cc:
   xbps-remove -Oo
 
