@@ -104,6 +104,7 @@ riverctl keyboard-layout -options 'grp:alt_space_toggle' us,latam
 
 pipewire &
 blueman-applet &
+swaync &
 swww-daemon --no-cache --format xrgb &
 swww img ~/.config/wallpapers/actual.png --transition-type random --transition-fps 100 &
 waybar

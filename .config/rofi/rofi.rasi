@@ -2,11 +2,10 @@ configuration {
     font: "Inter SemiBold 10.5";
     show-icons: true;
     icon-theme: "MoreWaita";
-    modi: "drun,window,recursivebrowser,calculator:~/.config/rofi/scripts/calculator.sh";
-    display-drun: "⎇ 1  󰕰";
-    display-window: "⎇ 2  ";
-    display-recursivebrowser: "⎇ 3  ";
-    display-calculator: "⎇ 4  󰃬";
+    modi: "drun,recursivebrowser";
+    display-drun: "1  󰕰";
+    display-window: "2  ";
+    display-recursivebrowser: "3  ";
     window-format: "{t}";
     window-thumbnail: true;
     terminal: "/usr/bin/kitty";
@@ -133,7 +132,7 @@ mode-switcher {
     background-color: inherit;
     color: inherit;
     spacing: 5;
-    width: 300;
+    width: 150;
 }
 
 button {
@@ -150,7 +149,7 @@ button.selected {
 
 textbox-switch-icon {
     font: "JetBrainsMono NFP Regular 12";
-    content: "󰌒";
+    content: "󰌒 ";
     background-color: @raised;
     color: inherit;
     expand: false;

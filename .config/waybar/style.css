@@ -50,13 +50,12 @@ button:hover {
 #memory,
 #disk,
 #temperature,
+#custom-notification,
 #backlight,
 #network,
 #pulseaudio,
 #custom-media,
-#tray,
-#mode,
-#mpd {
+#tray {
   margin: 5px 1px 1px 1px;
   padding: 7px 12px 7px 12px;
   color: #ffffff;
