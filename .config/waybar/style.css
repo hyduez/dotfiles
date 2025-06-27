@@ -1,12 +1,10 @@
 * {
-  font-family: Noto Sans, FiraCode Nerd Font;
+  font-family: CaskaydiaCove Nerd Font;
   font-size: 13px;
-  font-weight: bold;
 }
 
 window#waybar {
   background-color: rgba(43, 48, 59, 0.0);
-  color: #ffffff;
   transition-property: background-color;
   transition-duration: .5s;
 }
@@ -27,8 +25,8 @@ button:hover {
 }
 
 #tags button {
-  padding: 0 5px;
   color: #ffffff;
+  padding: 0 5px;
 }
 
 #tags button:hover {
@@ -70,7 +68,8 @@ button:hover {
   border-radius: 8;
 }
 
-#custom-power {
+#custom-lock {
+  color: #ffffff;
   margin: 6px 10px 0px 3px;
   padding: 0 1px 0 0;
   background-color: #1d1c1c;
@@ -107,19 +106,14 @@ label:focus {
   background-color: #eb4d4b;
 }
 
-#mpd {
-  background-color: #66cc99;
-  color: #2a5c45;
+#clock {
+  color: #bdb2ff;
 }
 
-#mpd.disconnected {
-  background-color: #f53c3c;
+#pulseaudio {
+  color: #ff70a6;
 }
 
-#mpd.stopped {
-  background-color: #90b1b1;
-}
-
-#mpd.paused {
-  background-color: #51a37a;
+#disk {
+  color: #72ddf7;
 }

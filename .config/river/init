@@ -2,7 +2,7 @@
 
 riverctl map normal Super Return spawn "kitty"
 
-riverctl map normal Super+Shift Z spawn "rofi -config ~/.config/rofi/rofi.rasi -show drun"
+riverctl map normal Super+Shift Space spawn "rofi -config ~/.config/rofi/rofi.rasi -show drun"
 riverctl map normal Super+Shift B spawn "killall waybar && waybar -c ~/.config/waybar/config.jsonc"
 
 riverctl map normal None PRINT spawn "grim ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png"
@@ -59,7 +59,7 @@ all_tags=$(((1 << 32) - 1))
 
 riverctl map normal Super 0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags $all_tags
-riverctl map normal Super Space toggle-float
+riverctl map normal Alt Space toggle-float
 riverctl map normal Super F toggle-fullscreen
 riverctl map normal Super Up send-layout-cmd rivertile "main-location top"
 riverctl map normal Super Right send-layout-cmd rivertile "main-location right"
@@ -70,7 +70,7 @@ riverctl declare-mode passthrough
 
 riverctl map normal Super F11 enter-mode passthrough
 riverctl map passthrough Super F11 enter-mode normal
-
+d
 for mode in normal locked; do
   riverctl map $mode None XF86Eject spawn 'eject -T'
   riverctl map $mode None XF86AudioRaiseVolume spawn 'pamixer -i 5'
@@ -91,19 +91,15 @@ riverctl border-width 0
 
 riverctl set-repeat 50 300
 
-riverctl rule-add -app-id 'float*' -title 'PasswordSafe' float
-riverctl rule-add -app-id "bar" csd
-
 riverctl spawn rivertile
 riverctl output-layout rivertile
 
 riverctl default-layout rivertile
 rivertile -view-padding 6 -outer-padding 6 &
 
-riverctl keyboard-layout -options 'grp:alt_space_toggle' us,latam
+riverctl keyboard-layout -options 'grp:win_space_toggle' us,latam
 
 pipewire &
-blueman-applet &
 swaync &
 swww-daemon --no-cache --format xrgb &
 swww img ~/.config/wallpapers/actual.png --transition-type random --transition-fps 100 &

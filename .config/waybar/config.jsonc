@@ -20,12 +20,11 @@
     "modules-right": [
         "pulseaudio",
         "network",
+        "disk",
         "cpu",
         "memory",
-        "keyboard-state",
-        "sway/language",
         "tray",
-        "custom/power"
+        "custom/lock"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -46,7 +45,10 @@
     // },
     "river/window": {
         "format": "  {}",
-        "max-length": 25,
+        "max-length": 26,
+    },
+    "river/tags": {
+        "hide-vacant": false
     },
     "tray": {
         // "icon-size": 21,
@@ -54,21 +56,24 @@
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%Y-%m-%d %H:%M}  󰃱"
+        "format": "{:%Y-%m-%d %H:%M} 󰃱"
+    },
+    "disk": {
+        "format": "{percentage_used}% "
     },
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{used}GiB/{total}GiB "
     },
     "temperature": {
         // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C  {icon}",
+        "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""],
         "tooltip-format": "CPU's Temperature"
     },
@@ -79,21 +84,21 @@
     },
     "network": {
         "format-wifi": "Wi-Fi ({signalStrength}%) ",
-        "format-ethernet": "Ethernet (:{cidr})  󰈀",
+        "format-ethernet": "Connected 󰈀",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}    {format_source}",
+        "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon}  {format_source}",
         "format-bluetooth-muted": "{icon} {format_source}",
         "format-muted": "{format_source}",
-        "format-source": "{volume}% ",
+        "format-source": "<span color='#b9fbc0'>{volume}% </span>",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
+            "headphone": "󰕾",
             "hands-free": "󰕾",
             "headset": "󰋋",
             "phone": "",
@@ -103,8 +108,9 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/power": {
-        "format" : "  ⏻  ",
+    "custom/lock": {
+        "format" : "    ",
+        "on-click": "waylock",
 		    "tooltip": true,
     }
 }
