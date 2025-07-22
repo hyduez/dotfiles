@@ -2,9 +2,9 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
         "source": "~/.config/fastfetch/logo.txt",
-                    "color": {
-        "1": "0"
-    }
+        "color": {
+            "1": "0"
+        }
     },
     "modules": [
         "break",
@@ -13,9 +13,14 @@
             "format": "\u001b[90m┌────────────────────── Hardware ──────────────────────┐"
         },
         {
-            "type": "host",
-            "key": "  PC",
-            "keyColor": "green"
+            "type": "title",
+            "key": "  Hostname",
+            "keyColor": "green",
+            "color": {
+                "user": "reset_",
+                "at": "reset_",
+                "host": "reset_"
+            }
         },
         {
             "type": "cpu",
@@ -25,7 +30,7 @@
         },
         {
             "type": "gpu",
-            "key": "│ ├󰡁",
+            "key": "│ ├󰨇 ",
             "keyColor": "green"
         },
         {
@@ -35,7 +40,12 @@
         },
         {
             "type": "disk",
-            "key": "└ └󱛟 ",
+            "key": "│ ├󰿠",
+            "keyColor": "green"
+        },
+        {
+            "type": "display",
+            "key": "└ └󰹑 ",
             "keyColor": "green"
         },
         {
@@ -49,7 +59,7 @@
         },
         {
             "type": "os",
-            "key": " OS",
+            "key": " System",
             "keyColor": "yellow"
         },
         {
@@ -60,6 +70,11 @@
         {
             "type": "packages",
             "key": "│ ├󰏖 ",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "initsystem",
+            "key": "│ ├ ",
             "keyColor": "yellow"
         },
         {
@@ -75,6 +90,11 @@
         },
         {
             "type": "wm",
+            "key": "│ ├ ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "lm",
             "key": "│ ├ ",
             "keyColor": "blue"
         },

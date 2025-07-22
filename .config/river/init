@@ -2,7 +2,7 @@
 
 riverctl map normal Super Return spawn "kitty"
 
-riverctl map normal Super+Shift Space spawn "rofi -config ~/.config/rofi/rofi.rasi -show drun"
+riverctl map normal Super+Shift Space spawn "walker"
 riverctl map normal Super+Shift B spawn "killall waybar && waybar -c ~/.config/waybar/config.jsonc"
 
 riverctl map normal None PRINT spawn "grim ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png"
@@ -100,6 +100,7 @@ rivertile -view-padding 6 -outer-padding 6 &
 riverctl keyboard-layout -options 'grp:win_space_toggle' us,latam
 
 pipewire &
+wireplumber &
 swaync &
 swww-daemon --no-cache --format xrgb &
 swww img ~/.config/wallpapers/actual.png --transition-type random --transition-fps 100 &
