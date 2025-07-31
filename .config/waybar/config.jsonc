@@ -7,48 +7,29 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "custom/logo",
         "river/tags",
-        "river/window"
     ],
     "modules-center": [
         "temperature",
         "clock",
+        "cpu",
         "custom/notification",
     ],
     "modules-right": [
         "pulseaudio",
         "network",
-        "disk",
-        "cpu",
         "memory",
+        "disk",
         "tray",
         "custom/lock"
     ],
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
     "river/window": {
         "format": "  {}",
         "max-length": 26,
     },
     "river/tags": {
         "num-tags": 9,
-        "tag-labels": ["1: ", "2: ", "3: ", "4: ", "5: ", "6: ", "7: ", "8: ", "9: "],
+        "tag-labels": ["1: ", "2: ", "3: 󰈹", "4: ", "5: ", "6: ", "7: ", "8: ", "9: "],
         "hide-vacant": true
     },
     "tray": {

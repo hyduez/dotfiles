@@ -40,7 +40,7 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 alias ls="exa -l --color=never --icons=always -B -o --no-permissions"
-
+alias cat="bat"
 alias tweet="ssh envs.net twtxt tweet "
 
 co() { g++ -std=c++17 -O2 -o "${1%.*}" $1 -Wall; }
