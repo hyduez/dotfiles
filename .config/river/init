@@ -95,7 +95,7 @@ riverctl spawn rivertile
 riverctl output-layout rivertile
 
 riverctl default-layout rivertile
-rivertile -view-padding 2 -outer-padding 7 &
+rivertile -view-padding 1 -outer-padding 6
 
 riverctl keyboard-layout -options 'grp:alt_space_toggle' us,latam
 
@@ -103,12 +103,19 @@ riverctl rule-add -app-id 'librewolf' tags $((1 << 2))
 riverctl rule-add -app-id 'discord' tags $((1 << 3))
 
 riverctl rule-add -app-id 'PasswordSafe (linux)' float
-riverctl rule-add -app-id 'thunar' float
+riverctl rule-add -app-id 'Thunar' float
+riverctl rule-add -app-id 'zoom' float
+riverctl rule-add -app-id 'org.pulseaudio.pavucontrol' float
 
-pipewire &
-swaync &
-swww-daemon --no-cache --format xrgb &
-swww img ~/.config/wallpapers/actual.png --transition-type random --transition-fps 100 &
-waybar &
-/usr/libexec/polkit-kde-authentication-agent-1 &
-dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=$nameofcompositor &
+riverctl rule-add -title 'Picture-in-Picture' float
+
+riverctl xcursor-theme McMojave-cursors
+riverctl spawn "gsettings set org.gnome.desktop.interface cursor-theme McMojave-cursors"
+
+riverctl spawn "pipewire"
+riverctl spawn "swaync"
+riverctl spawn "swww-daemon --no-cache --format xrgb"
+riverctl spawn "swww img ~/.config/wallpapers/actual.png --transition-type random --transition-fps 100"
+riverctl spawn "waybar"
+riverctl spawn "/usr/libexec/polkit-kde-authentication-agent-1"
+riverctl spawn "dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=$nameofcompositor"
