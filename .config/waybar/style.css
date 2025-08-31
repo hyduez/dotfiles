@@ -1,6 +1,6 @@
 * {
   font-family: CaskaydiaCove Nerd Font;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 window#waybar {
@@ -26,7 +26,7 @@ button:hover {
 
 #tags button {
   color: #b79ced;
-  padding: 0 12px;
+  padding: 0 10px;
 }
 
 #tags button:hover {
