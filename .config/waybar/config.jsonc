@@ -16,7 +16,7 @@
         "custom/notification",
     ],
     "modules-right": [
-        "pulseaudio",
+        "wireplumber",
         "network",
         "memory",
         "disk",
@@ -33,7 +33,7 @@
         "hide-vacant": true
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 12,
         "spacing": 10
     },
     "clock": {
@@ -44,7 +44,8 @@
         "format": "{percentage_used}% "
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% ",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
         "tooltip": false
     },
     "memory": {
@@ -72,7 +73,7 @@
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ipaddr}/{cidr}"
     },
-    "pulseaudio": {
+    "wireplumber": {
         "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon}  {format_source}",
         "format-bluetooth-muted": "{icon} {format_source}",
