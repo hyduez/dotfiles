@@ -111,6 +111,7 @@ riverctl rule-add -app-id 'Emulator' float
 riverctl rule-add -app-id 'virt-manager' float
 riverctl rule-add -app-id 'org.pulseaudio.pavucontrol' float
 riverctl rule-add -app-id 'io.github.Qalculate.qalculate-qt' float
+riverctl rule-add -app-id 'com.github.jmoerman.go-for-it' float
 
 riverctl rule-add -title 'Picture-in-Picture' float
 
