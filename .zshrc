@@ -55,14 +55,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 export PATH=$PATH:/home/paulov/.spicetify
 
-# fnm
-FNM_PATH="/home/paulov/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
-
 
 export ANDROID_HOME=$HOME/Android/Sdk/
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$HOME/.cargo/bin/

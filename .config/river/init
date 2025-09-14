@@ -95,7 +95,8 @@ riverctl spawn rivertile
 riverctl output-layout rivertile
 
 riverctl default-layout rivertile
-rivertile -view-padding 1 -outer-padding 4
+riverctl send-layout-cmd rivertile "-outer-padding 4"
+riverctl send-layout-cmd rivertile "-view-padding 1"
 
 riverctl keyboard-layout -options 'grp:alt_space_toggle' us,latam
 
