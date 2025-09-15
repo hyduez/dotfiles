@@ -16,6 +16,7 @@ compinit
 # End of lines added by compinstall
 
 zplug "agkozak/zsh-z"
+zplug "zsh-users/zsh-autosuggestions"
 zplug "plugins/git", from:oh-my-zsh
 
 eval "$(starship init zsh)"

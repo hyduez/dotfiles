@@ -123,6 +123,7 @@ riverctl spawn pipewire
 riverctl spawn swaync
 riverctl spawn "swww-daemon --no-cache --format xrgb"
 riverctl spawn "$HOME/.config/river/scripts/wallpaper.sh"
+riverctl spawn "$HOME/.config/river/scripts/rivertile.sh"
 riverctl spawn waybar
 riverctl spawn "/usr/libexec/polkit-kde-authentication-agent-1"
 riverctl spawn "dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=$nameofcompositor"
