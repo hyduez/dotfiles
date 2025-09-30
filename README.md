@@ -30,23 +30,7 @@ With BSPWM (Xorg):
 - clipmenud
 - pipewire
 
-General Software:
-- opendoas
-- nix
-- kitty
-- btop
-- fastfetch
-- lazyvim
-- starship
-- zsh
-- thunar
-- nnn
-- amfora
-- librewolf
-- inkscape
-- passwordsafe
-
-## Structure
+# WIP
 
 <details>
   <summary>Old Content</summary>
