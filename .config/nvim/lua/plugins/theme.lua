@@ -1,13 +1,9 @@
 return {
-  "ellisonleao/gruvbox.nvim",
-  name = "gruvbox",
+  "hyduez/flexoki-neovim-fork",
+  name = "flexoki",
   lazy = false,
   priority = 1000,
   config = function()
-    require("gruvbox").setup({
-      transparent_mode = true,
-    })
-
-    vim.cmd("colorscheme gruvbox")
+    vim.cmd("colorscheme flexoki-dark")
   end,
 }
