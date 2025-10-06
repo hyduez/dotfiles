@@ -2,7 +2,7 @@
 
 riverctl map normal Super Return spawn "kitty"
 
-riverctl map normal Super+Shift Space spawn "walker"
+riverctl map normal Super+Shift Space spawn "tofi-drun --drun-launch=true"
 riverctl map normal Super+Shift B spawn "killall waybar && waybar -c ~/.config/waybar/config.jsonc"
 
 riverctl map normal None PRINT spawn "grim ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png"
@@ -20,12 +20,6 @@ riverctl map normal Super Comma focus-output previous
 riverctl map normal Super+Shift Period send-to-output next
 riverctl map normal Super+Shift Comma send-to-output previous
 riverctl map normal Super+Shift Return zoom
-
-riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
-riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"
-
-riverctl map normal Super+Shift H send-layout-cmd rivertile "main-count +1"
-riverctl map normal Super+Shift L send-layout-cmd rivertile "main-count -1"
 
 riverctl map normal Super+Alt H move left 100
 riverctl map normal Super+Alt J move down 100
@@ -61,10 +55,10 @@ riverctl map normal Super 0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags $all_tags
 riverctl map normal Super V toggle-float
 riverctl map normal Super F toggle-fullscreen
-riverctl map normal Super Up send-layout-cmd rivertile "main-location top"
-riverctl map normal Super Right send-layout-cmd rivertile "main-location right"
-riverctl map normal Super Down send-layout-cmd rivertile "main-location bottom"
-riverctl map normal Super Left send-layout-cmd rivertile "main-location left"
+# riverctl map normal Super Up send-layout-cmd rivertile "main-location top"
+# riverctl map normal Super Right send-layout-cmd rivertile "main-location right"
+# riverctl map normal Super Down send-layout-cmd rivertile "main-location bottom"
+# riverctl map normal Super Left send-layout-cmd rivertile "main-location left"
 
 riverctl declare-mode passthrough
 
@@ -91,12 +85,21 @@ riverctl border-width 1
 
 riverctl set-repeat 50 300
 
-riverctl spawn rivertile
-riverctl output-layout rivertile
+riverctl spawn "riveroverflow"
 
-riverctl default-layout rivertile
-riverctl send-layout-cmd rivertile "outer-padding 0"
-riverctl send-layout-cmd rivertile "view-padding 1"
+riverctl default-layout riveroverflow
+
+riverctl send-layout-cmd riveroverflow "main_count 2"
+riverctl send-layout-cmd riveroverflow "main_ratio 0.5"
+riverctl send-layout-cmd riveroverflow "view_padding 1"
+riverctl send-layout-cmd riveroverflow "outer_padding 1"
+riverctl send-layout-cmd riveroverflow "view_per_page 4"
+
+riverctl map normal Super H send-layout-cmd riveroverflow "main_ratio -0.05"
+riverctl map normal Super L send-layout-cmd riveroverflow "main_ratio +0.05"
+
+riverctl map normal Super+Control J send-layout-cmd riveroverflow page_down
+riverctl map normal Super+Control K send-layout-cmd riveroverflow page_up
 
 riverctl keyboard-layout -options 'grp:alt_space_toggle' us,latam
 
@@ -119,11 +122,10 @@ riverctl rule-add -title 'Picture-in-Picture' float
 riverctl xcursor-theme McMojave-cursors
 riverctl spawn "gsettings set org.gnome.desktop.interface cursor-theme McMojave-cursors"
 
-riverctl spawn pipewire
-riverctl spawn swaync
+riverctl spawn "pipewire"
+riverctl spawn "swaync"
 riverctl spawn "swww-daemon --no-cache --format xrgb"
 riverctl spawn "$HOME/.config/river/scripts/wallpaper.sh"
-riverctl spawn "$HOME/.config/river/scripts/rivertile.sh"
-riverctl spawn waybar
+riverctl spawn "waybar"
 riverctl spawn "/usr/libexec/polkit-kde-authentication-agent-1"
 riverctl spawn "dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=$nameofcompositor"
