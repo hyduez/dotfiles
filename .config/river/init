@@ -1,6 +1,6 @@
 #!/bin/sh
 
-riverctl map normal Super Return spawn "kitty"
+riverctl map normal Super Return spawn "st"
 
 riverctl map normal Super+Shift Space spawn "tofi-drun --drun-launch=true"
 riverctl map normal Super+Shift B spawn "killall waybar && waybar -c ~/.config/waybar/config.jsonc"
