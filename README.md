@@ -19,19 +19,9 @@ With River (Wayland) I use:
 - slurp
 - swww
 - pipewire
-- rofi
-- dunst
+- tofi (drun mode)
+- swaync
 - wl-clipboard
-
-With BSPWM (Xorg):
-- polybar
-- sxhkd
-- rofi
-- dunst
-- clipmenud
-- pipewire
-
-# WIP
 
 <details>
   <summary>Old Content</summary>

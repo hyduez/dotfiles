@@ -21,6 +21,9 @@ riverctl map normal Super+Shift Period send-to-output next
 riverctl map normal Super+Shift Comma send-to-output previous
 riverctl map normal Super+Shift Return zoom
 
+riverctl map normal Super Right spawn "river-shifttags --shifts 1"
+riverctl map normal Super Left spawn "river-shifttags --shifts -1"
+
 riverctl map normal Super+Alt H move left 100
 riverctl map normal Super+Alt J move down 100
 riverctl map normal Super+Alt K move up 100
@@ -91,12 +94,9 @@ riverctl default-layout riveroverflow
 
 riverctl send-layout-cmd riveroverflow "main_count 2"
 riverctl send-layout-cmd riveroverflow "main_ratio 0.5"
-riverctl send-layout-cmd riveroverflow "view_padding 1"
+riverctl send-layout-cmd riveroverflow "view_padding 0"
 riverctl send-layout-cmd riveroverflow "outer_padding 1"
 riverctl send-layout-cmd riveroverflow "view_per_page 4"
-
-riverctl map normal Super H send-layout-cmd riveroverflow "main_ratio -0.05"
-riverctl map normal Super L send-layout-cmd riveroverflow "main_ratio +0.05"
 
 riverctl map normal Super+Control J send-layout-cmd riveroverflow page_down
 riverctl map normal Super+Control K send-layout-cmd riveroverflow page_up
@@ -116,6 +116,7 @@ riverctl rule-add -app-id 'virt-manager' float
 riverctl rule-add -app-id 'org.pulseaudio.pavucontrol' float
 riverctl rule-add -app-id 'io.github.Qalculate.qalculate-qt' float
 riverctl rule-add -app-id 'com.github.jmoerman.go-for-it' float
+riverctl rule-add -app-id 'localsend' float
 
 riverctl rule-add -title 'Picture-in-Picture' float
 
