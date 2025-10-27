@@ -17,10 +17,10 @@ compinit
 
 zplug "agkozak/zsh-z"
 zplug "zsh-users/zsh-autosuggestions"
+zplug "anatolykopyl/doas-zsh-plugin"
 zplug "plugins/git", from:oh-my-zsh
 
 eval "$(starship init zsh)"
-# End of lines added by paulov
 
 export GPG_TTY=$(tty)
 
@@ -64,3 +64,7 @@ export PATH=$PATH:$HOME/.cargo/bin/
 
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+
+export TERM=xterm
+
+source <(fzf --zsh)

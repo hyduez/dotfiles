@@ -1,5 +1,5 @@
 return {
-  "hyduez/flexoki-neovim-fork",
+  dir = "~/Workspaces/flexoki-neovim-fork",
   name = "flexoki",
   lazy = false,
   priority = 1000,

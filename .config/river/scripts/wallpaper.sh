@@ -12,7 +12,7 @@ while true; do
   wallpaperIndex=$((RANDOM % ${#wallpapers[@]}))
   selectedWallpaper="${wallpapers[$wallpaperIndex]}"
 
-  swww img "$selectedWallpaper"
+  /usr/bin/swww img "$selectedWallpaper"
 
   unset "wallpapers[$wallpaperIndex]"
 
