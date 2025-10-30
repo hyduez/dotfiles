@@ -29,6 +29,7 @@ $hg_branch\
 $pijul_channel\
 $docker_context\
 $package\
+$bun\
 $c\
 $cpp\
 $cmake\

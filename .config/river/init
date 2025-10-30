@@ -112,7 +112,7 @@ riverctl map normal Super L send-layout-cmd riveroverflow "main_ratio +0.05"
 riverctl map normal Super+Control J send-layout-cmd riveroverflow page_down
 riverctl map normal Super+Control K send-layout-cmd riveroverflow page_up
 
-riverctl keyboard-layout -options 'grp:alt_space_toggle' us,latam
+riverctl keyboard-layout -variant cmk_ed_dh -options 'grp:alt_space_toggle' us,latam
 
 riverctl rule-add -app-id 'librewolf' tags $((1 << 2))
 riverctl rule-add -app-id 'discord' tags $((1 << 3))
@@ -138,6 +138,6 @@ riverctl spawn "pipewire"
 riverctl spawn "swaync"
 riverctl spawn "swww-daemon --no-cache --format xrgb"
 riverctl spawn "$HOME/.config/river/scripts/wallpaper.sh"
-riverctl spawn "waybar"
+riverctl spawn "waybar -c $HOME/.config/waybar/river.jsonc -s $HOME/.config/waybar/river.css"
 riverctl spawn "/usr/libexec/polkit-kde-authentication-agent-1"
-riverctl spawn "dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=$nameofcompositor"
+riverctl spawn "dbus-update-activation-environment display i3sock swaysock wayland_display xdg_current_desktop=$nameofcompositor"
