@@ -62,8 +62,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:$HOME/.cargo/bin/
 
-export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+export PATH=$PATH:$HOME/Downloads/zig-x86_64-linux-0.15.2/
 
 export TERM=xterm
 
