@@ -1,6 +1,6 @@
 <div align='center'>
   <h1>git@codeberg.org:paulo/dotfiles</h1>
-  <p>«dotfiles» is a term for the hidden files on a Unix-like system (where files starting start with a dot (.) are hidden from ls command), commonly related to configuration files. Currently I'm using <a href='https://voidlinux.org/' target='_blank'>Void Linux</a> (glibc) with <a href='https://isaacfreund.com/software/river/' target='_blank'>River</a>, a Wayland compositor, as default graphical environment</p>
+  <p>«dotfiles» is a term for the hidden files on a Unix-like system (where files starting start with a dot (.) are hidden from ls command), commonly related to configuration files. Currently I'm using <a href='https://voidlinux.org/' target='_blank'>Void Linux</a> (glibc) with <a href='https://github.com/dreammaomao/mangowc' target='_blank'>MangoWC</a>, a Wayland compositor, as default graphical environment</p>
   <img src="assets/ss.png" alt="screenshot" />
 </div>
 
@@ -13,13 +13,12 @@
 ## Introduction 
 Alright, I'm not a fan of autologin, so I use SSDM to login manually, not tty cuz then I won't be able to select what graphical session I want, so that.
 
-With River (Wayland) I use:
-- waybar
+- waybar (sometimes)
 - grim
 - slurp
 - swww
 - pipewire
-- tofi (drun mode)
+- tofi
 - swaync
 - wl-clipboard
 
