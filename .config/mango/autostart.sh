@@ -11,4 +11,4 @@ pipewire &
 swaync &
 swww-daemon --no-cache --format xrgb &
 $HOME/.config/mango/scripts/wallpaper.sh &
-/usr/libexec/polkit-kde-authentication-agent-1 &
+/usr/libexec/xfce-polkit &

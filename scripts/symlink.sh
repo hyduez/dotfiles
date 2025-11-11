@@ -4,7 +4,7 @@ INPUT_DIR=$(dirname "$(dirname "$(readlink -f "$0")")")/.config
 
 OUTPUT_DIR=$HOME/.config
 
-SPECIAL_FILES=(".zshrc" "justfile")
+SPECIAL_FILES=(".zshenv")
 
 declare -A COLORS
 COLORS[green]="\033[32m"
