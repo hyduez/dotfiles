@@ -4,6 +4,9 @@ return {
   lazy = false,
   priority = 1000,
   config = function()
+    require("flexoki").setup({
+      transparent = true,
+    })
     vim.cmd("colorscheme flexoki-dark")
   end,
 }
