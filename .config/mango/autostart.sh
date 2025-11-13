@@ -8,7 +8,7 @@ wl-clip-persist --clipboard regular --reconnect-tries 0 &
 wl-paste --type text --watch cliphist store &
 
 pipewire &
-swaync &
+mako &
 swww-daemon --no-cache --format xrgb &
 $HOME/.config/mango/scripts/wallpaper.sh &
 /usr/libexec/xfce-polkit &
