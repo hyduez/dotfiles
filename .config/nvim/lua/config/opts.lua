@@ -28,6 +28,12 @@ opts.smartcase =true
 
 opts.showmode = false
 
+opts.fillchars = {
+  eob = " ",
+  vert = "│",
+  fold = "·",
+}
+
 local global = vim.g
 
 global.mapleader = " "
