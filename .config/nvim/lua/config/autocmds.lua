@@ -57,6 +57,15 @@ vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
     group = autocmd_group,
 })
 
+vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+    pattern = { '*.zig' },
+    desc = 'Auto-format Zig files after saving',
+    callback = function()
+        local fileName = vim.api.nvim_buf_get_name(0)
+        vim.cmd(':!zig fmt ' .. fileName)
+    end,
+})
+
 vim.api.nvim_create_autocmd('VimEnter', {
     callback = function(data)
         -- Check for plain startup (no args, empty buffer) or directory
