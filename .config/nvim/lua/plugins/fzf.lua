@@ -82,18 +82,16 @@ return {
         }
 
         require('fzf-lua').setup({
-            opts = {
-                file_ignore_patterns = {
-                    'node_modules',
-                    'dist',
-                    '.git',
-                    'build',
-                    'target',
-                    'package-lock.json',
-                    'bun.lock',
-                    'pnpm-lock.yaml',
-                    'yarn.lock',
-                },
+            file_ignore_patterns = {
+                'node_modules',
+                'dist',
+                '.git',
+                'build',
+                'target',
+                'package-lock.json',
+                'bun.lock',
+                'pnpm-lock.yaml',
+                'yarn.lock',
             },
         })
     end,
