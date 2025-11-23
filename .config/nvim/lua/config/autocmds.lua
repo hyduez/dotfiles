@@ -42,7 +42,7 @@ vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
     desc = 'Auto-format Biome-compatible files after saving',
     callback = function()
         local fileName = vim.api.nvim_buf_get_name(0)
-        vim.cmd(':!biome format --write')
+        vim.cmd(':!biome format --write ' .. fileName)
     end,
     group = autocmd_group,
 })
