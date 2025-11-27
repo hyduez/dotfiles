@@ -22,3 +22,8 @@ export QT_CONFIG_HOME="$XDG_CONFIG_HOME/QtProject"
 export BUN_INSTALL="$XDG_DATA_HOME/bun"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export FNM_PATH="$XDG_DATA_HOME/fnm"
+
+export XDG_RUNTIME_DIR="/run/user/$UID"
+export MOZ_ENABLE_WAYLAND=1
+export LIBSEAT_BACKEND=seatd
+export $(dbus-launch)
