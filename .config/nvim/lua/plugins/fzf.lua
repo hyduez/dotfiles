@@ -1,3 +1,19 @@
+local grep_opts = {
+    'rg',
+    '--vimgrep',
+    '--hidden',
+    '--follow',
+    '--glob',
+    '"!**/.git/*"',
+    '--column',
+    '--line-number',
+    '--no-heading',
+    '--color=always',
+    '--smart-case',
+    '--max-columns=4096',
+    '-e',
+}
+
 return {
     'ibhagwan/fzf-lua',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -92,6 +108,18 @@ return {
                 'bun.lock',
                 'pnpm-lock.yaml',
                 'yarn.lock',
+            },
+            files = {
+                cwd_prompt = false,
+                git_icons = true,
+                hidden = true,
+                follow = true,
+            },
+            grep = {
+                cwd_prompt = false,
+                cmd = table.concat(grep_opts, ' '),
+                hidden = true,
+                follow = true,
             },
         })
     end,
