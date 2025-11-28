@@ -11,4 +11,3 @@ pipewire &
 mako &
 swww-daemon --no-cache --format xrgb &
 $HOME/.config/mango/scripts/wallpaper.sh &
-/usr/libexec/xfce-polkit &
