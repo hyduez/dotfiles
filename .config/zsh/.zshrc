@@ -51,5 +51,4 @@ alias tweet="ssh envs.net twtxt tweet "
 
 source <(fzf --zsh)
 
-# bun completions
 [ -s "/home/paulov/.local/share/bun/_bun" ] && source "/home/paulov/.local/share/bun/_bun"
