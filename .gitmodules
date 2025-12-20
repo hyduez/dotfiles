@@ -2,3 +2,6 @@
 	path = .config/nvim
 	url = git@codeberg.org:paulo/nvim
 	branch = void-linux
+[submodule ".config/tmux/plugins/tpm"]
+	path = .config/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
