@@ -1,3 +1,4 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@codeberg.org:paulo/nvim
+	branch = void-linux
