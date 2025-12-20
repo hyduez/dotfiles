@@ -253,7 +253,7 @@ return {
                         end,
                     },
                     mru = {
-                        enable = false,
+                        enable = true,
                     },
                 },
             }

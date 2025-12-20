@@ -1,11 +1,16 @@
 return {
     {
         'wakatime/vim-wakatime',
-        lazy = false,
+        enabled = false,
+        lazy = true,
+        event = { 'BufReadPre', 'BufNewFile' },
         opts = {},
     },
     {
         'vyfor/cord.nvim',
+        enabled = false,
+        lazy = true,
+        event = { 'BufReadPre', 'BufNewFile' },
         build = ':Cord update',
         opts = {
             editor = {
