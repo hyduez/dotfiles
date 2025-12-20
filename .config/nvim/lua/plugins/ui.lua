@@ -246,6 +246,7 @@ return {
 
             local opts = {
                 hide = {
+
                     statusline = false,
                 },
                 config = {
@@ -257,11 +258,14 @@ return {
                     },
                     project = {
                         enable = true,
-                        limit = 8,
+                        limit = 10,
                         label = ' Most Recent Projects:',
                         action = function(path)
                             require('fzf-lua').files({ cwd = path })
                         end,
+                    },
+                    mru = {
+                        enable = false,
                     },
                 },
             }

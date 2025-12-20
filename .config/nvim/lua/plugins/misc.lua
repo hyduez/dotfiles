@@ -9,7 +9,7 @@ return {
         build = ':Cord update',
         opts = {
             editor = {
-                tooltip = 'NVIM',
+                tooltip = 'nvim',
             },
         },
     },

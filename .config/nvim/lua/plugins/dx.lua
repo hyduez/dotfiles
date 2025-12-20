@@ -137,7 +137,7 @@ return {
     },
     {
         'nvim-treesitter/nvim-treesitter',
-        lazy = false,
+        lazy = true,
         branch = 'master',
         build = ':TSUpdate',
         event = { 'BufReadPre', 'BufNewFile' },
