@@ -3,9 +3,9 @@ return {
         'rcarriga/nvim-notify',
         lazy = false,
         opts = {
-            timeout = 5000,
+            timeout = 3500,
             render = 'wrapped-compact',
-            stages = 'fade_in_slide_out',
+            stages = 'static',
             icons = {
                 ERROR = ' ',
                 WARN = ' ',
@@ -132,81 +132,71 @@ return {
         },
     },
     {
-        'nvimdev/dashboard-nvim',
-        event = 'VimEnter',
+        'nvim-lualine/lualine.nvim',
+        event = 'VeryLazy',
+        dependencies = { 'nvim-tree/nvim-web-devicons', 'f-person/git-blame.nvim' },
         config = function()
-            local logo = [[
- ██▒   █▓ ▒█████   ██▓▓█████▄     ███▄    █ ██▒   █▓ ██▓ ███▄ ▄███▓
-▓██░   █▒▒██▒  ██▒▓██▒▒██▀ ██▌    ██ ▀█   █▓██░   █▒▓██▒▓██▒▀█▀ ██▒
- ▓██  █▒░▒██░  ██▒▒██▒░██   █▌   ▓██  ▀█ ██▒▓██  █▒░▒██▒▓██    ▓██░
-  ▒██ █░░▒██   ██░░██░░▓█▄   ▌   ▓██▒  ▐▌██▒ ▒██ █░░░██░▒██    ▒██ 
-   ▒▀█░  ░ ████▓▒░░██░░▒████▓    ▒██░   ▓██░  ▒▀█░  ░██░▒██▒   ░██▒
-   ░ ▐░  ░ ▒░▒░▒░ ░▓   ▒▒▓  ▒    ░ ▒░   ▒ ▒   ░ ▐░  ░▓  ░ ▒░   ░  ░
-   ░ ░░    ░ ▒ ▒░  ▒ ░ ░ ▒  ▒    ░ ░░   ░ ▒░  ░ ░░   ▒ ░░  ░      ░
-     ░░  ░ ░ ░ ▒   ▒ ░ ░ ░  ░       ░   ░ ░     ░░   ▒ ░░      ░   
-      ░      ░ ░   ░     ░                ░      ░   ░         ░   
-     ░                 ░                        ░                   ]]
+            local colors = {
+                blue = '#80a0ff',
+                cyan = '#79dac8',
+                black = '#080808',
+                white = '#c6c6c6',
+                red = '#ff5189',
+                violet = '#d183e8',
+                grey = '#303030',
+            }
 
-            logo = string.rep('\n', 8) .. logo .. '\n\n'
-
-            local opts = {
-                hide = {
-                    statusline = false,
+            local bubbles_theme = {
+                normal = {
+                    a = { fg = colors.black, bg = colors.violet },
+                    b = { fg = colors.white, bg = colors.grey },
+                    c = { fg = colors.white },
                 },
-                config = {
-                    header = vim.split(logo, '\n'),
-                    shortcut = {
-                        { desc = '[ GitHub]', group = '@property', action = 'Lazy update' },
-                        { desc = '[ paulov]', group = '@property', action = 'Lazy update' },
-                        { desc = '[󰊳 Update]', group = '@property', action = 'Lazy update' },
-                    },
-                    project = {
-                        enable = true,
-                        limit = 8,
-                        label = ' Most Recent Projects:',
-                        action = function(path)
-                            require('fzf-lua').files({ cwd = path })
-                        end,
-                    },
+
+                insert = { a = { fg = colors.black, bg = colors.blue } },
+                visual = { a = { fg = colors.black, bg = colors.cyan } },
+                replace = { a = { fg = colors.black, bg = colors.red } },
+
+                inactive = {
+                    a = { fg = colors.white, bg = colors.black },
+                    b = { fg = colors.white, bg = colors.black },
+                    c = { fg = colors.white },
                 },
             }
 
-            if vim.o.filetype == 'lazy' then
-                vim.api.nvim_create_autocmd('WinClosed', {
-                    pattern = tostring(vim.api.nvim_get_current_win()),
-                    once = true,
-                    callback = function()
-                        vim.schedule(function()
-                            vim.api.nvim_exec_autocmds('UIEnter', { group = 'dashboard' })
-                        end)
-                    end,
-                })
-            end
+            local git_blame = require('gitblame')
 
-            require('dashboard').setup(opts)
-        end,
-        dependencies = { { 'nvim-tree/nvim-web-devicons' } },
-    },
-    {
-        'nvim-lualine/lualine.nvim',
-        event = 'VeryLazy',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
-        config = function()
             require('lualine').setup({
                 options = {
-                    globalstatus = true,
+                    theme = bubbles_theme,
+                    component_separators = '',
+                    section_separators = { left = '', right = '' },
                 },
                 sections = {
-                    lualine_b = {
-                        'branch',
+                    lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+                    lualine_b = { 'filename', 'branch' },
+                    lualine_c = {
                         {
-                            'diff',
-                            colored = false,
+                            git_blame.get_current_blame_text,
+                            cond = git_blame.is_blame_text_available,
                         },
                     },
-                    lualine_c = { 'filename' },
+                    lualine_x = {},
+                    lualine_y = { 'filetype', 'progress' },
+                    lualine_z = {
+                        { 'location', separator = { right = '' }, left_padding = 2 },
+                    },
                 },
-                extensions = { 'nvim-tree' },
+                inactive_sections = {
+                    lualine_a = { 'filename' },
+                    lualine_b = {},
+                    lualine_c = {},
+                    lualine_x = {},
+                    lualine_y = {},
+                    lualine_z = { 'location' },
+                },
+                tabline = {},
+                extensions = {},
             })
         end,
     },
@@ -231,16 +221,14 @@ return {
         event = 'VimEnter',
         config = function()
             local logo = [[
- ██▒   █▓ ▒█████   ██▓▓█████▄     ███▄    █ ██▒   █▓ ██▓ ███▄ ▄███▓
-▓██░   █▒▒██▒  ██▒▓██▒▒██▀ ██▌    ██ ▀█   █▓██░   █▒▓██▒▓██▒▀█▀ ██▒
- ▓██  █▒░▒██░  ██▒▒██▒░██   █▌   ▓██  ▀█ ██▒▓██  █▒░▒██▒▓██    ▓██░
-  ▒██ █░░▒██   ██░░██░░▓█▄   ▌   ▓██▒  ▐▌██▒ ▒██ █░░░██░▒██    ▒██ 
-   ▒▀█░  ░ ████▓▒░░██░░▒████▓    ▒██░   ▓██░  ▒▀█░  ░██░▒██▒   ░██▒
-   ░ ▐░  ░ ▒░▒░▒░ ░▓   ▒▒▓  ▒    ░ ▒░   ▒ ▒   ░ ▐░  ░▓  ░ ▒░   ░  ░
-   ░ ░░    ░ ▒ ▒░  ▒ ░ ░ ▒  ▒    ░ ░░   ░ ▒░  ░ ░░   ▒ ░░  ░      ░
-     ░░  ░ ░ ░ ▒   ▒ ░ ░ ░  ░       ░   ░ ░     ░░   ▒ ░░      ░   
-      ░      ░ ░   ░     ░                ░      ░   ░         ░   
-     ░                 ░                        ░                   ]]
+                                                                   
+      ████ ██████           █████      ██                    
+     ███████████             █████                            
+     █████████ ███████████████████ ███   ███████████  
+    █████████  ███    █████████████ █████ ██████████████  
+   █████████ ██████████ █████████ █████ █████ ████ █████  
+ ███████████ ███    ███ █████████ █████ █████ ████ █████ 
+██████  █████████████████████ ████ █████ █████ ████ ██████]]
 
             logo = string.rep('\n', 8) .. logo .. '\n\n'
 

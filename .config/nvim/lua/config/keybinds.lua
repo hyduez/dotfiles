@@ -13,3 +13,6 @@ km.set('n', '<leader>ff', require('fzf-lua').files, { desc = 'Open files fzf' })
 km.set('n', '<leader>fg', require('fzf-lua').live_grep, { desc = 'Grep files with fzf' })
 km.set('n', '<leader>fc', require('fzf-lua').grep_curbuf, { desc = 'Grep in the current buffer' })
 km.set('n', '<leader><leader>', require('fzf-lua').buffers, { desc = 'Browse buffer (fzf-lua)' })
+
+-- LazyGit.nvim
+km.set('n', '<leader>gl', '<cmd>LazyGit<cr>', { desc = 'Browse LazyGit' })

@@ -35,9 +35,10 @@ opts.fillchars = {
 opts.showmode = false
 opts.laststatus = 3
 
-local gb = vim.g
+local g = vim.g
 
-gb.mapleader = ' '
-gb.maplocalleader = '\\'
-gb.loaded_netrw = 1
-gb.loaded_netrwPlugin = 1
+g.mapleader = ' '
+g.maplocalleader = '\\'
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
+g.gitblame_display_virtual_text = 0
