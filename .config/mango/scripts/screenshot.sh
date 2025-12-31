@@ -8,15 +8,16 @@ if [ $ARG ]; then
     exit 1
   fi
 
+  if [ $ARG = "full" ]; then
+    grim $HOME/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png
+    exit 1
+  fi
+
   if [ $ARG = "full-copy" ]; then
     grim - | wl-copy -t image/png
     exit 1
   fi
 
-  if [ $ARG = "full" ]; then
-    grim $HOME/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png
-    exit 1
-  fi
 fi
 
 echo "You must entry a valid option! (region, full, full-copy)"

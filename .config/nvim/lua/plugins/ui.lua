@@ -5,7 +5,7 @@ return {
         opts = {
             timeout = 3500,
             render = 'wrapped-compact',
-            stages = 'static',
+            stages = 'fade_in_slide_out',
             icons = {
                 ERROR = ' ',
                 WARN = ' ',
@@ -95,7 +95,7 @@ return {
     {
         'nvim-lualine/lualine.nvim',
         event = 'VeryLazy',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        dependencies = { 'nvim-tree/nvim-web-devicons', 'f-person/git-blame.nvim' },
         config = function()
             require('lualine').setup({
                 options = {
@@ -134,7 +134,7 @@ return {
     {
         'nvim-lualine/lualine.nvim',
         event = 'VeryLazy',
-        dependencies = { 'nvim-tree/nvim-web-devicons', 'f-person/git-blame.nvim' },
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function()
             local colors = {
                 blue = '#80a0ff',
@@ -253,7 +253,8 @@ return {
                         end,
                     },
                     mru = {
-                        enable = true,
+                        enable = false,
+                        limit = 5,
                     },
                 },
             }
@@ -272,6 +273,6 @@ return {
 
             require('dashboard').setup(opts)
         end,
-        dependencies = { { 'nvim-tree/nvim-web-devicons' } },
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
     },
 }

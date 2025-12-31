@@ -100,6 +100,7 @@ return {
 
             require('fzf-lua').setup({
                 file_ignore_patterns = {
+                    'venv',
                     'node_modules',
                     'dist',
                     '.git',

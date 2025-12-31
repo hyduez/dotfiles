@@ -34,6 +34,31 @@ zplug load
 co() { g++ -std=c++17 -O2 -o "${1%.*}" $1 -Wall; }
 run() { co $1 && ./${1%.*} & fg; }
 
+yradio() {
+    if [ -z "$1" ]; then
+        echo "Usage: yradio <YouTube URL>"
+        echo "Example: yradio https://www.youtube.com/watch?v=abcd1234"
+        return 1
+    fi
+
+    ID=$(echo "$1" | sed -E 's/.*(v=|youtu\.be\/|embed\/)([a-zA-Z0-9_-]{11}).*/\2/')
+
+    if [ -z "$ID" ] || [ "${#ID}" -ne 11 ]; then
+        echo "Could not extract a valid ID from the URL."
+        return 1
+    fi
+
+    yt-dlp \
+        -x \
+        --audio-format mp3 \
+        --audio-quality 0 \
+        --embed-thumbnail \
+        --add-metadata \
+        -o "%(playlist_index)03d - %(title)s.%(ext)s" \
+        --playlist-items 1:100 \
+        "https://www.youtube.com/watch?v=$ID&list=RD$ID"
+}
+
 [ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
 export PATH="$BUN_INSTALL/bin:$PATH"

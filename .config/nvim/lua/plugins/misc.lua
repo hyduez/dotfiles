@@ -1,28 +1,60 @@
 return {
     {
         'wakatime/vim-wakatime',
-        enabled = false,
+        -- enabled = false,
         lazy = true,
         event = { 'BufReadPre', 'BufNewFile' },
         opts = {},
     },
     {
         'vyfor/cord.nvim',
-        enabled = false,
+        -- enabled = false,
         lazy = true,
         event = { 'BufReadPre', 'BufNewFile' },
         build = ':Cord update',
-        opts = {
-            editor = {
-                tooltip = 'nvim',
-            },
-        },
+        opts = function()
+            local handle = io.popen('uptime -p')
+
+            if not handle then
+                Result = 'unknown'
+            else
+                Result = handle:read('*a')
+                handle:close()
+            end
+
+            local res = Result:gsub('^%s*(.-)%s*$', '%1')
+
+            local opts = {
+                editor = {
+                    tooltip = res,
+                },
+            }
+
+            return opts
+        end,
     },
     {
-        dir = '~/Workspaces/flexoki-neovim-fork',
-        name = 'flexoki',
+        'projekt0n/github-nvim-theme',
+        -- enabled = false,
+        name = 'github',
         config = function()
-            vim.cmd('colorscheme flexoki-dark')
+            vim.cmd('colorscheme github_dark_high_contrast')
+        end,
+    },
+    {
+        'edeneast/nightfox.nvim',
+        enabled = false,
+        name = 'nightfox',
+        config = function()
+            vim.cmd('colorscheme carbonfox')
+        end,
+    },
+    {
+        'shatur/neovim-ayu',
+        enabled = false,
+        name = 'ayu-dark',
+        config = function()
+            vim.cmd('colorscheme ayu-dark')
         end,
     },
 }

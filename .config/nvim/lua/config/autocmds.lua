@@ -1,7 +1,7 @@
 local autocmd_group = vim.api.nvim_create_augroup('Custom auto-commands', { clear = true })
 
 vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
-    pattern = { '*.ts', '*.js', '*.json', '*.tsx', '*.jsx' },
+    pattern = { '*.ts', '*.js', '*.tsx', '*.jsx', '*.json' },
     desc = 'Auto-format Biome-compatible files after saving',
     callback = function()
         local fileName = vim.api.nvim_buf_get_name(0)
@@ -29,6 +29,24 @@ vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
     end,
 })
 
+vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+    pattern = { '*.go' },
+    desc = 'Auto-format Go files after saving',
+    callback = function()
+        local fileName = vim.api.nvim_buf_get_name(0)
+        vim.cmd(':!gofmt -w ' .. fileName)
+    end,
+})
+
+vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+    pattern = { '*.cpp' },
+    desc = 'Auto-format C++ files after saving',
+    callback = function()
+        local fileName = vim.api.nvim_buf_get_name(0)
+        vim.cmd(':!clang-format -i ' .. fileName)
+    end,
+})
+
 vim.api.nvim_create_autocmd('VimEnter', {
     callback = function(data)
         -- Check for plain startup (no args, empty buffer) or directory
@@ -50,5 +68,13 @@ vim.api.nvim_create_autocmd('VimEnter', {
         vim.schedule(function()
             require('dashboard'):instance()
         end)
+    end,
+})
+
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = function(event)
+        local opts = { buffer = event.buf }
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+        vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
     end,
 })
