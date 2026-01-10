@@ -25,6 +25,9 @@ return {
             local res = Result:gsub('^%s*(.-)%s*$', '%1')
 
             local opts = {
+                display = {
+                    theme = 'minecraft',
+                },
                 editor = {
                     tooltip = res,
                 },
