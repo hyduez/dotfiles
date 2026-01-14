@@ -16,6 +16,27 @@ local grep_opts = {
 
 return {
     {
+        'nvim-tree/nvim-tree.lua',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function()
+            require('nvim-tree').setup({
+                hijack_netrw = true,
+                hijack_directories = {
+                    enable = false,
+                },
+                actions = {
+                    open_file = {
+                        quit_on_open = false,
+                    },
+                },
+                view = {
+                    side = 'left',
+                    width = 30,
+                },
+            })
+        end,
+    },
+    {
         'ibhagwan/fzf-lua',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function()
