@@ -1,5 +1,9 @@
 return {
     {
+        'MeanderingProgrammer/render-markdown.nvim',
+        ft = { 'markdown', 'codecompanion' },
+    },
+    {
         'wakatime/vim-wakatime',
         -- enabled = false,
         lazy = true,
@@ -25,9 +29,6 @@ return {
             local res = Result:gsub('^%s*(.-)%s*$', '%1')
 
             local opts = {
-                display = {
-                    theme = 'minecraft',
-                },
                 editor = {
                     tooltip = res,
                 },

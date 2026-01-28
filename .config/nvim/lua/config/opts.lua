@@ -13,7 +13,7 @@ opts.list = true
 opts.listchars = 'eol:.,tab:>-,trail:~,extends:>,precedes:<'
 
 opts.number = true
-opts.relativenumber = false
+opts.relativenumber = true
 opts.cursorline = true
 opts.signcolumn = 'yes:1'
 opts.scrolloff = 8
