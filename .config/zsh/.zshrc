@@ -54,9 +54,11 @@ yradio() {
         --audio-quality 0 \
         --embed-thumbnail \
         --add-metadata \
+        --extractor-args "youtube:player_client=default,-android_sdkless" \
+        --extractor-args "youtubepot-bgutilhttp:base_url=http://127.0.0.1:4416;disable_innertube=1" \
         -o "%(playlist_index)03d - %(title)s.%(ext)s" \
         --playlist-items 1:100 \
-        "https://www.youtube.com/watch?v=$ID&list=RD$ID"
+        "https://www.youtube.com/watch?v=$ID&list=RD$ID" \
 }
 
 [ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"

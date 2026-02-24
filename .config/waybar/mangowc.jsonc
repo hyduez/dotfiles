@@ -1,19 +1,20 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 0, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        // "dwl/tags",
         "dwl/window"
     ],
     "modules-center": [
         "temperature",
         "clock",
         "cpu",
-        "custom/notification",
+        "custom/notification"
     ],
     "modules-right": [
         "wireplumber",

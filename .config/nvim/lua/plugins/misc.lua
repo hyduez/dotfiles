@@ -12,7 +12,7 @@ return {
     },
     {
         'vyfor/cord.nvim',
-        -- enabled = false,
+        enabled = false,
         lazy = true,
         event = { 'BufReadPre', 'BufNewFile' },
         build = ':Cord update',

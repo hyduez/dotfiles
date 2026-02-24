@@ -18,11 +18,11 @@ return {
             interactions = {
                 chat = {
                     adapter = 'litellm',
-                    model = 'qwen2.5-coder:1.5b',
+                    model = 'qwen3-32b',
                 },
                 inline = {
                     adapter = 'litellm',
-                    model = 'qwen2.5-coder:1.5b',
+                    model = 'qwen3-32b',
                 },
             },
         },
