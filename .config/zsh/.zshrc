@@ -72,7 +72,7 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
-alias ls="exa -l --color=never --icons=always -B -o --no-permissions"
+alias ls="eza -l --color=never --icons=always -B -o --no-permissions"
 alias cat="bat"
 alias tweet="ssh envs.net twtxt tweet "
 

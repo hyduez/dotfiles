@@ -5,7 +5,7 @@ return {
         opts = {
             timeout = 3500,
             render = 'wrapped-compact',
-            stages = 'fade_in_slide_out',
+            stages = 'static',
             icons = {
                 ERROR = ' ',
                 WARN = ' ',
