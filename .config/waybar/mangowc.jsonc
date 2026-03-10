@@ -13,8 +13,7 @@
     "modules-center": [
         "temperature",
         "clock",
-        "cpu",
-        "custom/notification"
+        "cpu"
     ],
     "modules-right": [
         "wireplumber",
@@ -67,15 +66,10 @@
         "format-icons": ["", "", ""],
         "tooltip-format": "CPU's Temperature"
     },
-    "custom/notification": {
-        "format": "󰂚",
-        "tooltip-format": "Notifications Center",
-        "on-click": "swaync-client -t -sw"
-    },
-    "network": {
+   "network": {
         "format-wifi": "Wi-Fi ({signalStrength}%) ",
-        "format-ethernet": "Connected 󰈀",
-        "tooltip-format": "Signal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "format-ethernet": "Ethernet 󰈀",
+        "tooltip-format": "Signal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>\nSpeed: <b>{bandwidthTotalBytes}</b>",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ipaddr}/{cidr}"
