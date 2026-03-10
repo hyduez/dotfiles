@@ -41,7 +41,7 @@ yradio() {
         return 1
     fi
 
-    ID=$(echo "$1" | sed -E 's/.*(v=|youtu\.be\/|embed\/)([a-zA-Z0-9_-]{11}).*/\2/')
+    local ID=$(echo "$1" | sed -E 's/.*(v=|youtu\.be\/|embed\/)([a-zA-Z0-9_-]{11}).*/\2/')
 
     if [ -z "$ID" ] || [ "${#ID}" -ne 11 ]; then
         echo "Could not extract a valid ID from the URL."
@@ -61,6 +61,13 @@ yradio() {
         "https://www.youtube.com/watch?v=$ID&list=RD$ID" \
 }
 
+tweet() {
+    local ts=$(date +"%Y-%m-%dT%H:%M:%S%:z")
+    echo -e "${ts}\t$*" >> ~/Documents/twtxt.txt
+    rsync -az ~/Documents/twtxt.txt misc:/opt/caddy/paulov.dousec.org/twtxt.txt
+}
+
+
 [ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
 export PATH="$BUN_INSTALL/bin:$PATH"
@@ -74,7 +81,6 @@ fi
 
 alias ls="eza -l --color=never --icons=always -B -o --no-permissions"
 alias cat="bat"
-alias tweet="ssh envs.net twtxt tweet "
 
 source <(fzf --zsh)
 
