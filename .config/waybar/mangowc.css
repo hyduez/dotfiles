@@ -1,111 +1,105 @@
 * {
-  font-family: CaskaydiaCove Nerd Font;
-  font-size: 10px;
+	border: none;
+	font-family: "JetBrainsMono Nerd Font Propo";
+	font-size: 11px;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
 }
 
 window#waybar {
-  background-color: #030303;
-  transition-property: background-color;
-  transition-duration: .5s;
+	background: transparent;
+	color: white;
 }
 
-window#waybar.hidden {
-  opacity: 0.2;
+tooltip {
+	background: rgba(4, 4, 4, 0.8);
+	border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+	color: white;
 }
 
-button {
-  box-shadow: inset 0 -3px transparent;
-  border: 0;
-  border-radius: 4px;
-}
-
-button:hover {
-  background: inherit;
-  box-shadow: inset 0 -2.5px #ffffff;
+#tags {
+	transition: all 150ms ease-in-out;
 }
 
 #tags button {
-  color: #8B7EC8;
-  padding: 0 5px;
+	transition: all 150ms ease-in-out;
+	padding: 1px 0px;
+	background: rgba(0, 0, 0, 0.3);
+	color: white;
+	border: 1px solid transparent;
+	border-radius: 999px;
+	margin: 0 2px;
+	margin-top: 0;
 }
 
-#tags button:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-#tags button.focused {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #343331;
-  box-shadow: inset 0 -2.5px #ffffff;
-}
-
-#tags button.urgent {
-  background-color: #D14D41;
-}
-
-#window,
-#clock,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#custom-notification,
-#backlight,
-#network,
-#wireplumber,
-#custom-media,
-#tray {
-  margin: 5px 1px 1px 1px;
-  padding: 7px 12px 7px 6px;
-  color: #ffffff;
-}
-
-#window {
-  margin: 5px 1px 0px 4px;
-  padding: 0;
-}
-
-#custom-lock {
-  color: #ffffff;
-  margin: 6px 5px 0px 3px;
-  padding: 0 1px 0 0;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-  margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-  margin-right: 0;
-}
-
-@keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: #000000;
-  }
-}
-
-label:focus {
-  background-color: #000000;
-}
-
-#tray>.passive {
-  -gtk-icon-effect: dim;
-}
-
-#tray>.needs-attention {
-  -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
+#tags button.active {
+	border: 1px solid alpha(#121212, 0.4);
+	background-color: alpha(#ffffff, 0.8);
+	color: #121212;
+	transition: all 150ms ease-in-out;
+	min-width: 35px;
+	border-radius: 8px;
 }
 
 #clock {
-  color: #8B7EC8;
+	font-weight: 800;
+	background: alpha(#121212, 0.4);
+	border-radius: 8px;
+	padding: 0px 5px;
 }
 
-#wireplumber {
-  color: #CE5D97;
+#pulseaudio {
+	font-weight: 800;
+	background: alpha(#121212, 0.4);
+	border-radius: 8px;
+	padding: 0px 5px;
+	margin: 0 3px;
+}
+
+#tray {
+	font-weight: 800;
+	background: alpha(#121212, 0.4);
+	border-radius: 99px;
+	padding: 0px 5px;
+	margin: 0 4px;
+}
+
+#custom-media {
+	margin: 0 2px;
+	padding: 2px 10px;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.3);
+	color: aliceblue; /* aliceblue */
+	font-weight: bold;
+}
+
+#network {
+	font-weight: 800;
+	background: alpha(#121212, 0.4);
+	border-radius: 8px;
+	padding: 0px 5px;
+	margin: 0 3px;
+}
+
+#mpris {
+	font-weight: 800;
+	background: alpha(#121212, 0.4);
+	border-radius: 8px;
+	padding: 0px 5px;
+	margin: 0 2px;
+}
+
+#group-main,
+#group_main,
+#main {
+	background-color: alpha(#121212, 0.4);
+	border-radius: 16px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 8px;
+	padding-left: 8px;
+	margin: 0 0 0 5px;
 }
