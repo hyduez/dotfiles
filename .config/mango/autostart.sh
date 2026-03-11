@@ -8,7 +8,5 @@ set +e
 
 pipewire &
 mako &
-mpdris2-rs &
 swww-daemon --no-cache --format xrgb &
 $HOME/.config/mango/scripts/wallpaper.sh &
-waybar -c ~/.config/waybar/mangowc.jsonc -s ~/.config/waybar/mangowc.css &

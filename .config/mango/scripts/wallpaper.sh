@@ -17,5 +17,5 @@ while true; do
   unset "wallpapers[$wallpaperIndex]"
   wallpapers=("${wallpapers[@]}")
 
-  sleep 2h
+  sleep 30m
 done
