@@ -81,6 +81,7 @@ fi
 
 alias ls="eza -l --color=never --icons=always -B -o --no-permissions"
 alias cat="bat"
+alias mango="dbus-launch mango"
 
 source <(fzf --zsh)
 
