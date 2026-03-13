@@ -39,7 +39,7 @@ return {
     },
     {
         'projekt0n/github-nvim-theme',
-        -- enabled = false,
+        enabled = false,
         name = 'github',
         config = function()
             vim.cmd('colorscheme github_dark_high_contrast')
@@ -59,6 +59,14 @@ return {
         name = 'ayu-dark',
         config = function()
             vim.cmd('colorscheme ayu-dark')
+        end,
+    },
+    {
+        'nyoom-engineering/oxocarbon.nvim',
+        -- enabled = false,
+        name = 'oxocarbon',
+        config = function()
+            vim.cmd('colorscheme oxocarbon')
         end,
     },
 }

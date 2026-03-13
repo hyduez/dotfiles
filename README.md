@@ -1,7 +1,7 @@
 <div align='center'>
   <h1>git@codeberg.org:paulo/dotfiles</h1>
   <p>«dotfiles» is a term for the hidden files on a Unix-like system (where files starting start with a dot (.) are hidden from ls command), commonly related to configuration files. Currently I'm using <a href='https://voidlinux.org/' target='_blank'>Void Linux</a> (glibc) with <a href='https://github.com/dreammaomao/mangowc' target='_blank'>MangoWC</a>, a Wayland compositor, as default graphical environment</p>
-  <img src="assets/ss.png" alt="screenshot" />
+  <img src="assets/screenshot.png" alt="screenshot" />
 </div>
 
 ## Index of Contents
