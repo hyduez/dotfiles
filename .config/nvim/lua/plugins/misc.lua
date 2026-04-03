@@ -32,6 +32,9 @@ return {
                 editor = {
                     tooltip = res,
                 },
+                display = {
+                    theme = 'catppuccin',
+                },
             }
 
             return opts
