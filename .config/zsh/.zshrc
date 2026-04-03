@@ -64,7 +64,7 @@ yradio() {
 tweet() {
     local ts=$(date +"%Y-%m-%dT%H:%M:%S%:z")
     echo -e "${ts}\t$*" >> ~/Documents/twtxt.txt
-    rsync -az ~/Documents/twtxt.txt misc:/opt/caddy/paulov.dousec.org/twtxt.txt
+    rsync -az ~/Documents/twtxt.txt paulov@192.168.1.4:/var/lib/www/paulov.dousec.org/twtxt.txt
 }
 
 

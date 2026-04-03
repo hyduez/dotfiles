@@ -28,5 +28,6 @@ export GOCACHE="$XDG_CACHE_HOME/go"
 
 # export XDG_RUNTIME_DIR="/run/user/$UID"
 export MOZ_ENABLE_WAYLAND=1
+export MOZ_DISABLE_RDD_SANDBOX=1
 export LIBSEAT_BACKEND=logind
 export $(dbus-launch)
