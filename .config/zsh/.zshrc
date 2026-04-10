@@ -88,3 +88,4 @@ source <(fzf --zsh)
 source ~/envs.sh
 
 [ -s "/home/paulov/.local/share/bun/_bun" ] && source "/home/paulov/.local/share/bun/_bun"
+export PATH=$HOME/.local/bin:$PATH
