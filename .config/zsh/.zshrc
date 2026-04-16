@@ -63,13 +63,13 @@ yradio() {
 }
 
 tweet() {
-    local ts=$(date +"%Y-%m-%dT%H:%M:%S%:z")
+    local ts=$(date +%FT%T%:z)
     echo -e "${ts}\t$*" >> ~/Documents/twtxt.txt
     rsync -az ~/Documents/twtxt.txt paulov@192.168.1.4:/var/lib/www/paulov.dousec.org/twtxt.txt
 }
 
 journal() {
-    local ts=$(date +"%Y-%m-%dT%H:%M:%S%:z")
+    local ts=$(date +%FT%T%:z)
     echo -e "${ts}\t$*" >> ./journal.txt
 }
 
