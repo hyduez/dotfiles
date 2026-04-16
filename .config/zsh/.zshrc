@@ -19,6 +19,7 @@ zplug "anatolykopyl/doas-zsh-plugin"
 zplug "plugins/git", from:oh-my-zsh
 
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
 
 export GPG_TTY=$(tty)
 
@@ -67,6 +68,10 @@ tweet() {
     rsync -az ~/Documents/twtxt.txt paulov@192.168.1.4:/var/lib/www/paulov.dousec.org/twtxt.txt
 }
 
+journal() {
+    local ts=$(date +"%Y-%m-%dT%H:%M:%S%:z")
+    echo -e "${ts}\t$*" >> ./journal.txt
+}
 
 [ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
@@ -85,7 +90,7 @@ alias mango="dbus-launch mango"
 
 source <(fzf --zsh)
 
-source ~/envs.sh
+# source ~/envs.sh
 
 [ -s "/home/paulov/.local/share/bun/_bun" ] && source "/home/paulov/.local/share/bun/_bun"
 export PATH=$HOME/.local/bin:$PATH
