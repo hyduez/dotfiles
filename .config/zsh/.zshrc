@@ -18,7 +18,7 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "anatolykopyl/doas-zsh-plugin"
 zplug "plugins/git", from:oh-my-zsh
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 
 export GPG_TTY=$(tty)
@@ -70,7 +70,7 @@ tweet() {
 
 journal() {
     local ts=$(date +%FT%T%:z)
-    echo -e "${ts}\t$*" >> ./journal.txt
+    echo -e "${ts}\t${USER}\t$*" >> ./journal.txt
 }
 
 [ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
