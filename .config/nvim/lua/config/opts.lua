@@ -1,6 +1,5 @@
 local opts = vim.opt
 
-opts.clipboard = ''
 opts.termguicolors = true
 opts.tabstop = 4
 opts.softtabstop = 4
@@ -19,7 +18,7 @@ opts.signcolumn = 'yes:1'
 opts.scrolloff = 8
 opts.showcmd = true
 
-opts.clipboard = 'unnamed'
+opts.clipboard = 'unnamedplus'
 
 opts.hlsearch = true
 opts.incsearch = true

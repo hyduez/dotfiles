@@ -1,70 +1,7 @@
-local autocmd_group = vim.api.nvim_create_augroup('Custom auto-commands', { clear = true })
-
-vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
-    pattern = { '*.ts', '*.js', '*.tsx', '*.jsx', '*.json' },
-    desc = 'Auto-format Biome-compatible files after saving',
-    callback = function()
-        local fileName = vim.api.nvim_buf_get_name(0)
-        vim.cmd(':!biome format --write ' .. fileName)
-    end,
-    group = autocmd_group,
-})
-
-vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
-    pattern = { '*.lua' },
-    desc = 'Auto-format Lua files after saving',
-    callback = function()
-        local fileName = vim.api.nvim_buf_get_name(0)
-        vim.cmd(':!stylua ' .. fileName)
-    end,
-    group = autocmd_group,
-})
-
-vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
-    pattern = { '*.zig' },
-    desc = 'Auto-format Zig files after saving',
-    callback = function()
-        local fileName = vim.api.nvim_buf_get_name(0)
-        vim.cmd(':!zig fmt ' .. fileName)
-    end,
-})
-
-vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
-    pattern = { '*.go' },
-    desc = 'Auto-format Go files after saving',
-    callback = function()
-        local fileName = vim.api.nvim_buf_get_name(0)
-        vim.cmd(':!gofmt -w ' .. fileName)
-    end,
-})
-
-vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
-    pattern = { '*.cpp' },
-    desc = 'Auto-format C++ files after saving',
-    callback = function()
-        local fileName = vim.api.nvim_buf_get_name(0)
-        vim.cmd(':!clang-format -i ' .. fileName)
-    end,
-})
-
-vim.api.nvim_create_autocmd('VimEnter', {
-    callback = function(data)
-        local no_args = data.file == '' and vim.bo[data.buf].buftype == ''
-        local directory = vim.fn.isdirectory(data.file) == 1
-
-        if not (no_args or directory) then
-            return
-        end
-
-        if directory then
-            vim.cmd.enew()
-            vim.cmd.bd('#')
-            vim.cmd.cd(data.file)
-        end
-
-        vim.schedule(function()
-            require('dashboard'):instance()
-        end)
+vim.api.nvim_create_autocmd('BufWritePre', {
+    pattern = '*',
+    callback = function(args)
+        require('conform').format({ bufnr = args.buf })
     end,
 })
 
@@ -73,5 +10,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
         local opts = { buffer = event.buf }
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
         vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+        vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
+        vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+        vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+        vim.keymap.set('n', '<leader>dD', vim.lsp.buf.workspace_diagnostics, opts)
+        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
     end,
 })

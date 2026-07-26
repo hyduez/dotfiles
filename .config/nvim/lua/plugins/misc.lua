@@ -9,8 +9,7 @@ return {
     {
         'wakatime/vim-wakatime',
         -- enabled = false,
-        lazy = true,
-        event = { 'BufReadPre', 'BufNewFile' },
+        lazy = false,
         opts = {},
     },
     {
@@ -21,6 +20,7 @@ return {
         build = ':Cord update',
         opts = function()
             local handle = io.popen('uptime -p')
+            local Result = nil
 
             if not handle then
                 Result = 'unknown'

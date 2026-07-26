@@ -19,7 +19,12 @@ return {
             vim.notify = require('notify')
         end,
     },
-
+    {
+        'f-person/git-blame.nvim',
+        opts = {
+            enabled = true,
+        },
+    },
     {
         'folke/noice.nvim',
         event = 'VeryLazy',
@@ -91,45 +96,6 @@ return {
                 end,
             })
         end,
-    },
-    {
-        'nvim-lualine/lualine.nvim',
-        event = 'VeryLazy',
-        dependencies = { 'nvim-tree/nvim-web-devicons', 'f-person/git-blame.nvim' },
-        config = function()
-            require('lualine').setup({
-                options = {
-                    globalstatus = true,
-                },
-                sections = {
-                    lualine_b = {
-                        'branch',
-                        {
-                            'diff',
-                            colored = false,
-                        },
-                    },
-                    lualine_c = { 'filename' },
-                },
-                extensions = { 'nvim-tree' },
-            })
-        end,
-    },
-    {
-        'folke/which-key.nvim',
-        event = 'VeryLazy',
-        opts = {
-            preset = 'helix',
-        },
-        keys = {
-            {
-                '<leader>?',
-                function()
-                    require('which-key').show({ global = false })
-                end,
-                desc = 'Buffer Local Keymaps (which-key)',
-            },
-        },
     },
     {
         'nvim-lualine/lualine.nvim',
@@ -258,18 +224,6 @@ return {
                     },
                 },
             }
-
-            if vim.o.filetype == 'lazy' then
-                vim.api.nvim_create_autocmd('WinClosed', {
-                    pattern = tostring(vim.api.nvim_get_current_win()),
-                    once = true,
-                    callback = function()
-                        vim.schedule(function()
-                            vim.api.nvim_exec_autocmds('UIEnter', { group = 'dashboard' })
-                        end)
-                    end,
-                })
-            end
 
             require('dashboard').setup(opts)
         end,

@@ -9,8 +9,8 @@ return {
         opts = {
             keymap = {
                 preset = 'default',
-                ['<CR>'] = { 'accept', 'fallback' },
-                ['<Tab>'] = { 'accept', 'fallback' },
+                ['<CR>'] = { 'fallback' },
+                ['<Tab>'] = { 'accept' },
             },
             appearance = {
                 nerd_font_variant = 'mono',
@@ -71,5 +71,15 @@ return {
             require('tiny-inline-diagnostic').setup()
             vim.diagnostic.config({ virtual_text = false })
         end,
+    },
+    {
+        'stevearc/conform.nvim',
+        opts = {
+            formatters_by_ft = {
+                javascript = { 'biome' },
+                lua = { 'stylua' },
+                go = { 'gofmt' },
+            },
+        },
     },
 }
