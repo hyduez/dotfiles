@@ -76,9 +76,10 @@ return {
         'stevearc/conform.nvim',
         opts = {
             formatters_by_ft = {
-                javascript = { 'biome' },
-                lua = { 'stylua' },
                 go = { 'gofmt' },
+                javascript = { 'biome' },
+                json = { 'biome' },
+                lua = { 'stylua' },
             },
         },
     },
