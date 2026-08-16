@@ -82,7 +82,7 @@
         "tooltip": true
     },
     "memory": {
-        "format": "{used:0.2f}GiB  {total}GiB "
+        "format": "{used:0.2f}GiB  {total:0.2f}GiB "
     },
     "temperature": {
         "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",

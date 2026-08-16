@@ -77,7 +77,7 @@ journal() {
 
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH=$PATH:$XDG_DATA_HOME/cargo/bin/
-export PATH=$PATH:$HOME/Downloads/zig/
+# export PATH=$PATH:$HOME/Downloads/zig/
 
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
@@ -89,8 +89,9 @@ alias cat="bat"
 alias mango="dbus-launch mango"
 
 source <(fzf --zsh)
+source <(jj util completion zsh)
 
 [ -s "/home/paulov/.local/share/bun/_bun" ] && source "/home/paulov/.local/share/bun/_bun"
-export PATH=$HOME/.local/bin:$PATH
 
-export PATH=$PATH:/home/paulov/.spicetify
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.spicetify:$PATH
