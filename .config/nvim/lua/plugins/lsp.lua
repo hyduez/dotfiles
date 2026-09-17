@@ -40,28 +40,18 @@ return {
         },
     },
     {
-        'mason-org/mason-lspconfig.nvim',
-        event = { 'BufReadPre', 'BufNewFile' },
-        dependencies = { 'mason-org/mason.nvim', 'neovim/nvim-lspconfig' },
-        opts = function()
-            local capabilities = require('blink.cmp').get_lsp_capabilities()
-            ---@type MasonLspconfigSettings
-            return {
-                ensure_installed = {}, -- Add "lua_ls" here if you want auto-install
-                automatic_installation = false,
-                handlers = {
-                    -- Default handler for other servers
-                    function(server_name)
-                        require('lspconfig')[server_name].setup({ capabilities = capabilities })
-                    end,
-                },
-            }
-        end,
-    },
-    {
         'mason-org/mason.nvim',
         cmd = { 'Mason', 'MasonUpdate' },
         opts = {},
+    },
+    {
+        'mason-org/mason-lspconfig.nvim',
+        event = { 'BufReadPre', 'BufNewFile' },
+        dependencies = { 'mason-org/mason.nvim', 'neovim/nvim-lspconfig' },
+        opts = {
+            ensure_installed = {},
+            automatic_installation = false,
+        },
     },
     {
         'rachartier/tiny-inline-diagnostic.nvim',
@@ -81,11 +71,17 @@ return {
                 json = { 'biome' },
                 lua = { 'stylua' },
             },
+            format_on_save = function(bufnr)
+                if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+                    return
+                end
+                return { timeout_ms = 500, lsp_fallback = true }
+            end,
         },
     },
     {
         'mrcjkb/rustaceanvim',
         version = '^9',
         lazy = false,
-    }
+    },
 }

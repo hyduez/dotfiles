@@ -100,7 +100,7 @@ return {
     {
         'nvim-lualine/lualine.nvim',
         event = 'VeryLazy',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        dependencies = { 'nvim-tree/nvim-web-devicons', 'f-person/git-blame.nvim' },
         config = function()
             local colors = {
                 blue = '#80a0ff',
@@ -205,11 +205,6 @@ return {
                 },
                 config = {
                     header = vim.split(logo, '\n'),
-                    shortcut = {
-                        { desc = '[ GitHub]', group = '@property', action = 'Lazy update' },
-                        { desc = '[ paulov]', group = '@property', action = 'Lazy update' },
-                        { desc = '[󰊳 Update]', group = '@property', action = 'Lazy update' },
-                    },
                     project = {
                         enable = true,
                         limit = 10,

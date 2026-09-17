@@ -1,0 +1,78 @@
+* {
+  font-family: CaskaydiaCove Nerd Font;
+  font-size: 12px;
+  /* font-weight: bold; */
+}
+
+#bar {
+  background-color: none;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#tags,
+#workspaces {
+  color: #8B7EC8;
+}
+
+#tags.active,
+#workspaces.active {
+  color: #ffffff;
+  background-color: #343331;
+}
+
+#tags.urgent,
+#workspaces.urgent {
+  background-color: #D14D41;
+}
+
+#tags.hover,
+#workspaces.hover {
+  color: #ffffff;
+  background-color: #343331;
+}
+
+#title,
+#clock,
+#cpu,
+#network,
+#volume,
+#hideclients,
+#overview,
+#tray,
+#tags,
+#workspaces,
+#layout,
+#custom-lock,
+#custom-disk,
+#custom-temperature,
+#custom-memory,
+#custom-netspeed {
+  padding: 0px 3px;
+  padding-left: 6px;
+  color: #ffffff;
+  background-color: #030303;
+  border-radius: 10px;
+  margin: 2px 3px;
+}
+
+#clock {
+  color: #8B7EC8;
+}
+
+menu {
+  background-color: #030303;
+  border-color: #525252;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+menuitem {
+  color: #ffffff;
+}
+
+menuitem:hover {
+  color: #ffffff;
+  background-color: #343331;
+}

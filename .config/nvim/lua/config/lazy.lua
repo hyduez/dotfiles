@@ -23,8 +23,8 @@ require('lazy').setup({
         -- import your plugins
         { import = 'plugins' },
     },
-    --- colorscheme that will be used when installing plugins.
-    install = { colorscheme = { 'flexoki-dark' } },
+    -- colorscheme that will be used when installing plugins.
+    install = { colorscheme = { 'oxocarbon' } },
     -- automatically check for plugin updates
     checker = { enabled = true },
 })

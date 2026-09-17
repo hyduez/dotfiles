@@ -1,0 +1,94 @@
+{
+    "layer": "top",
+    "height": 30,
+    "buffer-scale": 8,
+    "scroll-interval": 100,
+    "smooth-scrolling-threshold": 5.0,
+
+    "modules-left": [
+        "workspaces",
+        "layout",
+        "window"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "hideclients",
+        "network",
+        "custom/netspeed",
+        "cpu",
+        "custom/memory",
+        "custom/disk",
+        "custom/temperature",
+        "pulseaudio",
+        "clock#time",
+        "tray",
+        "custom/lock"
+    ],
+
+    "workspaces": {
+        "hide-empty": true,
+        "tag-names": ["", "", "", "", "", "", "", "", ""],
+        "overview-label": "OVERVIEW",
+        "on-click": "activate",
+        "on-click-right": "toggle"
+    },
+    "layout": {
+        "format": "{}"
+    },
+    "window": {
+        "format": "{}",
+        "max-length": 280,
+        "on-click": "bash ~/.config/mango/scripts/screenshot.sh",
+        "on-click-right": "python /home/wrq/tool/ocr.py"
+    },
+
+    "network": {
+        "format": "{ifname} 󰈀"
+    },
+    "hideclients": {
+        "format": "{} "
+    },
+    "cpu": {
+        "format": "{load} "
+    },
+    "custom/memory": {
+        "exec": "free -m | awk '/^Mem:/ {printf \"%.1f/%.1fGiB\", $3/1024, $2/1024}'",
+        "format": "{} ",
+        "interval": 2
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {bt}",
+        "format-muted": "{volume}% {bt} 󰝟",
+        "icons": ["󰝟", "󰕿", "󰕾"],
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 2",
+        "on-scroll-down": "pamixer -d 2"
+    },
+    "clock#time": {
+        "format": "{:L%Y-%m-%d %H:%M} 󰃱"
+    },
+    "tray": {
+        "icon-size": 10,
+        "spacing": 10
+    },
+
+    "custom/netspeed": {
+        "exec": "sh ~/.config/mangobar/scripts/netspeed.sh",
+        "format": "{}",
+        "interval": 1
+    },
+    "custom/disk": {
+        "exec": "df -h / | awk 'NR==2 {printf \"%s/%s (%s)\", $3, $2, $5}'",
+        "format": "{} ",
+        "interval": 10
+    },
+    "custom/temperature": {
+        "exec": "awk '{t=$1/1000; icon=(t>=80)?\"\":(t>=60)?\"\":\"\"; printf \"%d°C %s\", t, icon}' /sys/class/hwmon/hwmon4/temp1_input",
+        "format": "{}",
+        "interval": 2
+    },
+    "custom/lock": {
+        "format": "    ",
+        "on-click": "waylock"
+    }
+}

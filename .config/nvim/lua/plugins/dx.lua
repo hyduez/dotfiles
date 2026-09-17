@@ -17,6 +17,8 @@ local grep_opts = {
 return {
     {
         'nvim-tree/nvim-tree.lua',
+        cmd = { 'NvimTreeToggle', 'NvimTreeFocus' },
+        keys = { { '<leader>e', '<cmd>NvimTreeToggle<cr>', desc = 'Toggle NvimTree' } },
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function()
             require('nvim-tree').setup({
@@ -38,6 +40,37 @@ return {
     },
     {
         'ibhagwan/fzf-lua',
+        cmd = 'FzfLua',
+        keys = {
+            {
+                '<leader>ff',
+                function()
+                    require('fzf-lua').files()
+                end,
+                desc = 'Open files fzf',
+            },
+            {
+                '<leader>fg',
+                function()
+                    require('fzf-lua').live_grep()
+                end,
+                desc = 'Grep files with fzf',
+            },
+            {
+                '<leader>fc',
+                function()
+                    require('fzf-lua').grep_curbuf()
+                end,
+                desc = 'Grep in the current buffer',
+            },
+            {
+                '<leader><leader>',
+                function()
+                    require('fzf-lua').buffers()
+                end,
+                desc = 'Browse buffer (fzf-lua)',
+            },
+        },
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function()
             local fzf_defaults = require('fzf-lua').defaults

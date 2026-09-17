@@ -8,7 +8,7 @@ set +e
 
 pipewire &
 mako &
-waybar &
+mangobar &
 swaybg -i $HOME/.config/wallpapers/image.png &
 # swww-daemon --no-cache --format xrgb &
 # $HOME/.config/mango/scripts/wallpaper.sh &
